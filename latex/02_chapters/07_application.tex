@@ -1,0 +1,53 @@
+\subsection{Estimation on DREAM data}
+In the following we estimate MNL, NL and CNL models on the DREAM data described in section \ref{subsec: dreamdata}.
+For the estimation we use Larch, which uses two optimization routines SLSQP and BHHH to estimate utility parameters as well as a number of nesting related parameters. There is no real consensus about whether structural nodes should be assigned linear utility or simply represent components of the error terms. Larch does not directly model structural utility, but instead lets the utility of choosing a specific nest be\footnote{\url{http://larch.readthedocs.io/en/latest/math/aggregate-choice.html}}
+\begin{equation}
+  V_{m} = \mu_{m} \left( \sum_{j} \alpha_{im} \exp \left( \frac{V_i}{\mu_m}
+  \right) \right)
+\end{equation}
+Where $\mu_m$ is then estimated. That is the independent utility from structural nodes, is simply the weighted sum of utilities available from children of the given nest. Furthermore to estimate the cross nested $\alpha$ parameter, Larch uses a logit-like link function\footnote{\url{http://larch.readthedocs.io/en/latest/example/111_cnl.html}} like
+\begin{equation}
+  \alpha_{im} = \frac{\exp(\phi_{i} Z )}{\sum_j \exp(\phi_j Z)}
+\end{equation}
+to avoid dealing with optimization constraints, while still ensuring $\alpha_{im} \in [0,1]$. naturally this defaults to $0.5$ when not specified, equivalent to setting $Z = 0$. In \ref{tab: results} we report a CNL model with the default setting of $Z = 0$ to simplify the results as much as possible. Results are however robust to the inclusion of this specification.
+\\ \\
+For identification we attempt a strategy similar to the one used in the iterative optimization routine, setting all parameters related to $c_1$ to $0$ (we used the true values when simulating, but this is only to help our less sophisticated optimizers), and one parameter in each $c_i$ = $0$. This effectively normalize the utility of each choice, with a baseline of one, as well as normalizing the utility of each nest, also with a baseline of one.
+\\ \\
+Table \ref{tab: results} show estimated parameters in MNL, NL and CNL models on the DREAM data described in section \ref{subsec: dreamdata}. First note that for the NL model $\mu_m$ is estimated to 1, as would be expected since there is only one nest. In the CNL model we do not estimate any $\alpha$'s but instead estimate the logsum parameters to be $0.6$ and $0.96$ respectively. In all three models, the square of age is very close to $0$, while age in itself is only really important in the NL model. In general it is difficult to compare these estimates directly.
+Like in the MNL all of these estimates are best interpreted by calculating marginal effects at the mean, but for both the NL and CNL models, these are complicated functions dependent on $G$'s derivatives as we have shown in section \ref{sec:marginalderivation}.
+
+\begin{table}
+  \centering
+  \footnotesize
+\begin{tabular}{c|ll|ll|ll}
+  \toprule
+           & \multicolumn{2}{c}{CNL}    & \multicolumn{2}{c}{NL}      & \multicolumn{2}{c}{MNL}                \\ \hline
+     parameter &      $\beta$ &        $t$-value &       $\beta$ &         $t$-value &         $\beta$ &           $t$-value \\
+\midrule
+ASC$_2$      &    -0.412 &  -2.344 &   13.053 &  33.174 & -0.578 & -2.661 \\
+ASC$_3$      &     1.012 &   5.648 &  -88.537 & -61.640 &  1.053 &  5.249 \\
+age$_2$      &     0.048 &   5.660 &   -0.581 & -32.905 &  0.058 &  5.419 \\
+age$_3$      &     0.014 &   1.561 &    5.833 &  66.572 &  0.018 &  1.859 \\
+agesq$_2$    &    -0.000 &  -3.712 &    0.007 &  36.513 & -0.000 & -3.420 \\
+agesq$_3$     &    -0.000 &  -1.754 &   -0.091 & -69.004 & -0.000 & -1.729 \\
+AC$_2$       &    -0.163 &  -3.739 &   -3.318 & -55.419 & -0.209 & -3.838 \\
+AC$_3$       &     0.262 &   5.945 &   11.220 &  52.640 &  0.238 &  4.782 \\
+Male$_2$     &     0.016 &   0.769 &   -0.331 & -10.520 &  0.020 &  0.761 \\
+Male$_3$     &     0.108 &   4.826 &    6.618 &  61.748 &  0.113 &  4.419 \\
+$\mu_1$       &     0.755 &  32.108 &    1.000 &     - &    - &    - \\
+$\mu_2$       &     0.962 &  -1.738 &      - &     - &    - &    - \\ \hline
+Iterations & \multicolumn{2}{c}{64}      & \multicolumn{2}{c}{61}      & \multicolumn{2}{c}{4}                \\
+AIC & \multicolumn{2}{c}{-2.137}      & \multicolumn{2}{c}{-4.882}      & \multicolumn{2}{c}{1.866}                \\
+Optimizer  & \multicolumn{2}{c}{SLSQP}   & \multicolumn{2}{c}{SLSQP, BHHH}   & \multicolumn{2}{c}{BHHH} \\
+\bottomrule
+\end{tabular}
+\caption[Optimization results]{Optimization results, DREAM data. Subscripts denote the choice  $c_i : i \in2,3$ for which the parameter is calculated, except for $\mu$ where they identify nests.}
+\label{tab: results}
+\end{table}
+
+Some authors \citep{hausman_specification_1984, koppelman_self_2006}) propose using likelihood ratio (LR), Wald, or Lagrange multiplier tests for model selection by comparing an estimated NL model to the MNL model that can be specified as a special case of the more general NL model. On the surface this might seem reasonable to apply to CNL models as well. We have shown the GEV framework nests both MNL, NL and CNL models, and that one way of representing this is trough the $\alpha$ matrix. However, using LR tests does not account for the fact that $\alpha$'s are co-linearly dependent, nor for the fact that the choice set $\mathcal{C}$ is altered when moving from e.g. a NL model to a MNL model. This alteration of the choice set, means the models are not algebraically nested as is required in the LR test. Instead MNL is only nested when we allow for set operations.
+\\ \\
+The justification for using LR tests is weak as it does not take these considerations into account. Instead of LR values, we therefore calculate the Akaike Information Criterion\footnote{$AIC = 2k - 2 \ln(\hat{\mathcal{L}})$ with $k$ being the number of parameters estimated and $\hat{\mathcal{L}}$ the maximum of the likelihood.}, which does not require models to be nested.
+\\ \\
+We find that while AIC's are close, the lowest AIC is achieved by the NL model indicating that nesting $c_1$ ordinary unemployment benefits and $c_2$ being on sick leave, or various other benefits is the best of the three models. This is intuitive as the third category $c_3$, ordinary employment is a choice probably made by a different type of individuals than those who end up in either $c_1$ or $c_2$. One interpretation of these results is that there is selection between $c_1,c_2$ and $c_3$. In other word there seems to be some selection into the nest of unemployment among those who were on sick leave one year prior. Why this might be the case is left for future research, as this question is probably not suitable for answering within the GEV framework.
+The model does not give an answer as to whether this selection is driven by the individuals, as an alternative explanation could be that it is a sampling effect, where those in the nest share traits such as high age, making it difficult for them to get into employment and overcome severe sickness respectively. A bias might also arise from the effect that it is not solely up to the individual to decide on which benefits to receive, producing a high degree of substitution within the social benefit nest if some individuals are misplaced in the benefits system.

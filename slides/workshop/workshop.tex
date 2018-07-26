@@ -1,0 +1,188 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage[style=authoryear, backend=bibtex8, natbib=true, maxcitenames=2]{biblatex}
+
+\usepackage{graphicx}
+\usepackage{import}
+
+\usepackage{array} % needed for \arraybackslash
+\usepackage{adjustbox} % for \adjincludegraphics
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\title{Cross-nested logit models (CNL)}
+\subtitle{Estimating complex network structures}
+% \date{\today}
+\date{\today}
+\author{Thor Donsby Noe \& Kristian Urup Larsen}
+\institute{Department of Economics, University of Copenhagen}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+
+
+    % \definecolor{BlueTOL}{HTML}{222255}
+    \definecolor{BrownTOL}{HTML}{666633}
+    \definecolor{GreenTOL}{HTML}{225522}
+    % \setbeamercolor{normal text}{fg=BlueTOL,bg=white}
+    \setbeamercolor{alerted text}{fg=BrownTOL}
+    \setbeamercolor{example text}{fg=GreenTOL}
+
+    \setbeamercolor{block title alerted}{use=alerted text,
+        fg=alerted text.fg,
+        bg=}
+    \setbeamercolor{block body alerted}{use={block title alerted, alerted text},
+        fg=alerted text.fg,
+        bg=}
+    \setbeamercolor{block title example}{use=example text,
+        fg=example text.fg,
+        bg=}
+    \setbeamercolor{block body example}{use={block title example, example text},
+        fg=example text.fg,
+        bg=}
+
+    \setbeamercolor{block title alerted}{use=alerted text,
+        fg=alerted text.fg,
+        bg=alerted text.bg!80!alerted text.fg}
+    \setbeamercolor{block body alerted}{use={block title alerted, alerted text},
+        fg=alerted text.fg,
+        bg=block title alerted.bg!50!alerted text.bg}
+    \setbeamercolor{block title example}{use=example text,
+        fg=example text.fg,
+        bg=example text.bg!80!example text.fg}
+    \setbeamercolor{block body example}{use={block title example, example text},
+        fg=example text.fg,
+        bg=block title example.bg!50!example text.bg}
+
+
+\begin{document}
+\setbeamercolor{background canvas}{bg=white}
+\maketitle
+
+
+% ------------------------------------------------------------------------------
+% ------ FRAME -----------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\begin{frame}{Research question}
+  \textbf{RQ:}
+    \begin{itemize}
+      \item Show how the cross-nested logit model can extend the concepts of nested choices to a range of complex choice puzzles.
+      \item Implement an estimator for the cross-nested logit on synthetic and real data (for the Danish unemployment benefits systems).
+    \end{itemize}
+
+  \textbf{Status:}
+  \begin{itemize}
+    \item We know how the estimator should be coded up (there are linear algebra related technicalities making this difficult).
+    \item Optimizing such a complex likelihood function is probably too difficult for us (but we are looking into it).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Motivation}
+\textbf{Independence of Irrelevant Alternatives (IIA):}
+  \begin{itemize}
+    \item Assumes that the relative odds ratio between two alternatives $\frac{Pr(c_1)}{Pr(c_2)}$ is independent of the whether other alternatives exist.
+      \begin{itemize}
+      \item[$\rightarrow$] i.e. there is equal competition between all pairs of alternatives. This is violated if a pair of alternatives share unobserved attributes.
+      \end{itemize}
+    \item Holds everywhere for the Multinomial Logit, only within nests for the Nested Logit, but never in nest where cross-nesting is allowed.
+  \end{itemize}
+
+  \begin{figure}[!h]
+    \begin{center}
+    \def\svgwidth{0.90\columnwidth}
+    \import{03_figures/}{MNL_NL_CNL_2.pdf_tex}
+    \end{center}
+    % \caption{Examples of different choice models and structures for four choices.} \label{fig: MNL_NL_CNL}
+  \end{figure}
+
+
+\end{frame}
+
+\begin{frame}{The mathematics}
+
+In general the model class has $p_i = \frac{e^{V_i + \ln G_i} }{\sum_j e^{V_j + \ln G_j}}$ We can derive a closed form likelihood, from which we can derive
+\begin{equation} \label{eq: likelihoodprob}
+\begin{split}
+\textrm{Pr}(i | \mathcal{C})  &=
+\sum_m
+\frac{\left(
+ \sum_j \alpha_{jm} z_j^{\mu_m} \right)^{\frac{\mu}{\mu_m}}}{\sum_n \left(
+  \sum_j \alpha_{jn} z_j^{\mu_n} \right)^{\frac{\mu}{\mu_n}}
+} \times
+\frac{\alpha_{im}z_i^{\mu_m}}{\sum_j \alpha_{jm} z_j^{\mu_m}} \\
+&= \sum_m\textrm{Pr}(m | \mathcal{C}) \times \textrm{Pr}(i| m)
+\end{split}
+\end{equation}
+
+The log likelihood is then $\mathcal{L} = \sum_K d_{k \textrm{ chooses } i} \log \textrm{Pr}(i)$
+
+\end{frame}
+
+
+\begin{frame}{Estimation}
+  \begin{columns}[t]
+  \begin{column}{.4\textwidth}
+  \adjincludegraphics[width=\linewidth,valign=t]{iterEstimate}
+  \end{column}
+  \begin{column}{.6\textwidth}
+  \begin{itemize}
+    \item Clearly not correct estimates. Perhaps some kind of convergence? Depending on initial values this might look better or worse.
+  \end{itemize}
+  \end{column}
+  \end{columns}
+
+  \textbf{Current procedure:}
+  \begin{itemize}
+    \item initiate with some parameters set to 0,1 or true value.
+    \item for each parameter find a univariate optimum
+    \item repeat $n$ times over all parameters.
+  \end{itemize}
+
+  \textbf{Out thoughts:}
+  \begin{itemize}
+    \item The model is over-identified?
+    \item The likelihood has a very weak global minimum $\Rightarrow$ we cannot feasibly find the correct minimum without advanced optimization?
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Estimation}
+
+\textbf{Alternatives}
+\begin{itemize}
+\item Within-nest optimization - basically double counts cross nested options, but with a weighting due to sampling effects in each nest.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Usability}
+  We haven't written a lot about this so far, but we want to emphasize how complex parameter interpretation is in this framework.
+  \begin{itemize}
+    \item There potentially are many local minima of the likelihood function.
+    \item The math is complex, i.e. marginal effects are
+
+    \begin{equation}    \small{
+        \frac{\partial \textrm{Pr}(i|\mathcal{C})}{\partial x} =
+        \textrm{Pr}(i|\mathcal{C}) \left(
+        \beta_i - \sum_j  \left[\beta_j \textrm{Pr}(j | \mathcal{C})  + \frac{e^{x\beta_j} \frac{\partial^2 G}{\partial z_j \partial x}}{\sum_{j'} e^{x\beta_{j'}} \frac{\partial G}{\partial z_{j'}}}  \right]    \right) +  \frac{e^{x\beta_i} \frac{\partial^2 G}{\partial z_i \partial x}}{\sum_j e^{x\beta_j} \frac{\partial G}{\partial z_j}}
+}    \end{equation}
+  \end{itemize}
+  So all in all you either
+  \begin{itemize}
+    \item[\textbf{a)}] Need parameter estimates for interpreting and should therefore use a simpler model
+    \item[\textbf{b)}] or need a model general enough to fit weird correlations, in which case you should try out Machine Learning.
+  \end{itemize}
+\end{frame}
+
+
+\end{document}

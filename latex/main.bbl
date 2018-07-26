@@ -1,0 +1,1360 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nyt/global/}
+  \entry{arrow_difficulty_1950}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AKJ}{%
+         family={Arrow},
+         familyi={A\bibinitperiod},
+         given={Kenneth\bibnamedelima J.},
+         giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{AKJ1}
+    \strng{fullhash}{AKJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1950}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1086/256963
+    \endverb
+    \field{issn}{0022-3808, 1537-534X}
+    \field{number}{4}
+    \field{pages}{328\bibrangedash 346}
+    \field{title}{A {Difficulty} in the {Concept} of {Social} {Welfare}}
+    \verb{url}
+    \verb https://www.journals.uchicago.edu/doi/10.1086/256963
+    \endverb
+    \field{volume}{58}
+    \field{journaltitle}{Journal of Political Economy}
+    \field{month}{08}
+    \field{year}{1950}
+    \field{urlday}{11}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{ben-akiva_discrete_1985}{book}{}
+    \name{author}{3}{}{%
+      {{hash=BAME}{%
+         family={Ben-Akiva},
+         familyi={B\bibinitperiod-A\bibinitperiod},
+         given={Moshe\bibnamedelima E.},
+         giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=LSR}{%
+         family={Lerman},
+         familyi={L\bibinitperiod},
+         given={Steven\bibnamedelima R.},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=LSR}{%
+         family={Lerman},
+         familyi={L\bibinitperiod},
+         given={Steven\bibnamedelima R.},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {MIT Press}%
+    }
+    \keyw{Architecture / Urban \& Land Use Planning}
+    \strng{namehash}{BAME+1}
+    \strng{fullhash}{BAMELSRLSR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{1985}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    Discrete Choice Analysis presents these results in such a way that they are
+  fully accessible to the range of students and professionals who are involved
+  in modelling demand and consumer behavior in general or specifically in
+  transportation - whether from the point of view of the design of transit
+  systems, urban and transport economics, public policy, operations research,
+  or systems management and planning.The methods of discrete choice analysis
+  and their applications in the modelling of transportation systems constitute
+  a comparatively new field that has largely evolved over the past 15 years.
+  Since its inception, however, the field has developed rapidly, and this is
+  the first text and reference work to cover the material systematically,
+  bringing together the scattered and often inaccessible results for graduate
+  students and professionals. Discrete Choice Analysis presents these results
+  in such a way that they are fully accessible to the range of students and
+  professionals who are involved in modelling demand and consumer behavior in
+  general or specifically in transportation - whether from the point of view of
+  the design of transit systems, urban and transport economics, public policy,
+  operations research, or systems management and planning. The introductory
+  chapter presents the background of discrete choice analysis and context of
+  transportation demand forecasting. Subsequent chapters cover, among other
+  topics, the theories of individual choice behavior, binary and multinomial
+  choice models, aggregate forecasting techniques, estimation methods, tests
+  used in the process of model development, sampling theory, the nested-logit
+  model, and systems of models. Discrete Choice Analysis is ninth in the MIT
+  Press Series in Transportation Studies, edited by Marvin Manheim.%
+    }
+    \field{isbn}{978-0-262-02217-0}
+    \field{note}{Google-Books-ID: oLC6ZYPs9UoC}
+    \field{shorttitle}{Discrete {Choice} {Analysis}}
+    \field{title}{Discrete {Choice} {Analysis}: {Theory} and {Application} to
+  {Travel} {Demand}}
+    \field{year}{1985}
+  \endentry
+
+  \entry{bierlaire_overspecification_1997}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Bierlaire},
+         familyi={B\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {fre}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1997}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1287/trsc.31.4.363
+    \endverb
+    \field{issn}{0041-1655}
+    \field{number}{4}
+    \field{pages}{363\bibrangedash 371}
+    \field{title}{On the overspecification of multinomial and nested logit
+  models due to alternative specific constants}
+    \field{volume}{31}
+    \verb{file}
+    \verb E-Tidsskrifter | On the overspecification of multinomial and nested l
+    \verb ogit models due to alternative specific constants:C\:\\Users\\thorn\\
+    \verb Zotero\\storage\\TIWIBI94\\resolve.html:text/html
+    \endverb
+    \field{journaltitle}{Transportation Science}
+    \field{year}{1997}
+  \endentry
+
+  \entry{bierlaire_general_2001}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Bierlaire},
+         familyi={B\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{A general formulation of the cross-nested logit model}
+    \field{volume}{1st}
+    \field{year}{2001}
+  \endentry
+
+  \entry{bierlaire_biogeme:_2003}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Bierlaire},
+         familyi={B\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{pages}{27}
+    \field{title}{{BIOGEME}: a free package for the estimation of discrete
+  choice models}
+    \field{volume}{3rd}
+    \verb{file}
+    \verb Bierlaire - BIOGEME a free package for the estimation of disc.pdf:C\:
+    \verb \\Users\\thorn\\Zotero\\storage\\KAZQXX9I\\Bierlaire - BIOGEME a free
+    \verb  package for the estimation of disc.pdf:application/pdf
+    \endverb
+    \field{year}{2003}
+  \endentry
+
+  \entry{bierlaire_theoretical_2006}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Bierlaire},
+         familyi={B\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    The emergence of Intelligent Transportation Systems and the associated
+  technologies has increased the need for complex models and algorithms.
+  Namely, real-time information systems, directly influencing transportation
+  demand, must be supported by detailed behavioral models capturing travel and
+  driving decisions. Discrete choice models methodology provide an appropriate
+  framework to capture such behavior. Recently, the Cross-Nested Logit (CNL)
+  model has received quite a bit of attention in the literature to capture
+  decisions such as mode choice, departure time choice and route choice. \%The
+  CNL model is an extension of the Nested Logit model, providing \%more
+  flexibility at the cost of some complexity in the model formulation. In this
+  paper, we develop on the general formulation of the Cross Nested Logit model
+  proposed by Ben-Akiva and Bierlaire (1999) and based on the Generalized
+  Extreme Value (GEV) model. We show that it is equivalent to the formulations
+  byby Papola (2004) and Wen and Koppelman (2001). We also show that the
+  formulations by Small(1987) and Vovsha(1997) are special cases of this
+  formulation. We formally prove that the Cross-Nested Logit model is indeed a
+  member of the GEV models family. In doing so, we clearly distinguish between
+  conditions that are necessary to prove consistency with the GEV theory, from
+  normalization conditions. Finally, we propose to estimate the model with
+  non-linear programming algorithms, instead of heuristics proposed in the
+  literature. In order to make it operational, we provide the first derivatives
+  of the log-likelihood function, which are necessary to such optimization
+  procedures.%
+    }
+    \verb{doi}
+    \verb 10.1007/s10479-006-0015-x
+    \endverb
+    \field{issn}{0254-5330, 1572-9338}
+    \field{number}{1}
+    \field{pages}{287\bibrangedash 300}
+    \field{title}{A theoretical analysis of the cross-nested logit model}
+    \verb{url}
+    \verb https://link.springer.com/article/10.1007/s10479-006-0015-x
+    \endverb
+    \field{volume}{144}
+    \verb{file}
+    \verb Full Text PDF:C\:\\Users\\thorn\\Zotero\\storage\\TMJUB2CQ\\Bierlaire
+    \verb  - 2006 - A theoretical analysis of the cross-nested logit m.pdf:appl
+    \verb ication/pdf;Snapshot:C\:\\Users\\thorn\\Zotero\\storage\\PQW4W6WU\\s1
+    \verb 0479-006-0015-x.html:text/html
+    \endverb
+    \field{journaltitle}{Annals of Operations Research}
+    \field{month}{04}
+    \field{year}{2006}
+    \field{urlday}{22}
+    \field{urlmonth}{03}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{bierlaire_estimation_2008}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Bierlaire},
+         familyi={B\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Estimation of discrete choice models with {BIOGEME} 1.6}
+    \verb{file}
+    \verb Citeseer - Full Text PDF:C\:\\Users\\thorn\\Zotero\\storage\\79EMUH2P
+    \verb \\Bierlaire - 2008 - Estimation of discrete choice models with BIOGEM
+    \verb E .pdf:application/pdf;Citeseer - Snapshot:C\:\\Users\\thorn\\Zotero\
+    \verb \storage\\RXIT3RPY\\summary.html:text/html
+    \endverb
+    \field{year}{2008}
+  \endentry
+
+  \entry{bierlaire_pythonbiogeme:_2016}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Bierlaire},
+         familyi={B\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{{PythonBiogeme}: a short introduction}
+    \field{volume}{2016}
+    \field{year}{2016}
+  \endentry
+
+  \entry{bierlaire_estimation_2009}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=BM}{%
+         family={Bierlaire},
+         familyi={B\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Fetiarison},
+         familyi={F\bibinitperiod},
+         given={Mamy},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bierlaire},
+         familyi={B\bibinitperiod},
+         given={Michel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Fetiarison},
+         familyi={F\bibinitperiod},
+         given={Mamy},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BM+1}
+    \strng{fullhash}{BMFMBMFM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2009}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    Discrete choice models are constantly in evolution in the literature. Since
+  they enable to capture wide range of situations, they have been widely used
+  by researchers and also practitioners in several fields of applications
+  including econometrics and transportation demand analysis. However,
+  estimation procedures are complicated and not always easily available to
+  researchers. BIOGEME is a free software package for estimating by maximum
+  likelihood a broad range of random utility models. It can estimate
+  particularly Multivariate Extreme Value (MEV) models including the logit
+  model, the nested logit model, the cross-nested logit model, and the network
+  MEV model, as well as continuous and discrete mixtures of these models.
+  Biogeme has been designed to provide modelers with tools to investigate a
+  wide variety of discrete choice models without worrying about the estimation
+  algorithm itself. In this paper, we present some new features and
+  capabilities of Biogeme. To make it more flexible, we allow explicitly the
+  user to specify the random utility model to be estimated and the associated
+  likelihood function. With simple formulations, it will be able to handle more
+  sophisticated models such as latent variable models, latent class models,
+  dynamic models, etc. required by modern modeling practice, in particular in
+  transportation.%
+    }
+    \field{booktitle}{In {Swiss} {Transport} {Research} {Conference} ({STRC}}
+    \field{shorttitle}{Estimation of discrete choice models}
+    \field{title}{Estimation of discrete choice models: extending {BIOGEME}}
+    \verb{file}
+    \verb Citeseer - Full Text PDF:C\:\\Users\\thorn\\Zotero\\storage\\7BUPU5X7
+    \verb \\Bierlaire m.fl. - 2009 - Estimation of discrete choice models exten
+    \verb ding BI.pdf:application/pdf;Citeseer - Snapshot:C\:\\Users\\thorn\\Zo
+    \verb tero\\storage\\M9AQNL8M\\summary.html:text/html
+    \endverb
+    \field{year}{2009}
+  \endentry
+
+  \entry{cameron_microeconometrics:_2005}{book}{}
+    \name{author}{2}{}{%
+      {{hash=CAC}{%
+         family={Cameron},
+         familyi={C\bibinitperiod},
+         given={A.\bibnamedelima Colin},
+         giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=TPK}{%
+         family={Trivedi},
+         familyi={T\bibinitperiod},
+         given={Pravin\bibnamedelima K.},
+         giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \keyw{Business \& Economics / Econometrics, Business \& Economics /
+  Statistics, Mathematics / Applied}
+    \strng{namehash}{CACTPK1}
+    \strng{fullhash}{CACTPK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2005}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    This book provides the most comprehensive treatment to date of
+  microeconometrics, the analysis of individual-level data on the economic
+  behavior of individuals or firms using regression methods for cross section
+  and panel data. The book is oriented to the practitioner. A basic
+  understanding of the linear regression model with matrix algebra is assumed.
+  The text can be used for a microeconometrics course, typically a second-year
+  economics PhD course; for data-oriented applied microeconometrics field
+  courses; and as a reference work for graduate students and applied
+  researchers who wish to fill in gaps in their toolkit. Distinguishing
+  features of the book include emphasis on nonlinear models and robust
+  inference, simulation-based estimation, and problems of complex survey data.
+  The book makes frequent use of numerical examples based on generated data to
+  illustrate the key models and methods. More substantially, it systematically
+  integrates into the text empirical illustrations based on seven large and
+  exceptionally rich data sets.%
+    }
+    \field{isbn}{978-1-139-44486-6}
+    \field{note}{Google-Books-ID: TdlKAgAAQBAJ}
+    \field{shorttitle}{Microeconometrics}
+    \field{title}{Microeconometrics: {Methods} and {Applications}}
+    \field{month}{07}
+    \field{year}{2005}
+  \endentry
+
+  \entry{dream_danish_2018}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=D}{%
+         family={DREAM},
+         familyi={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{D1}
+    \strng{fullhash}{D1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{The {Danish} {Institute} for {Economic} {Modelling} and
+  {Forecasting}, {DREAM}}
+    \verb{url}
+    \verb http://www.dreammodel.dk/default_en.html
+    \endverb
+    \field{year}{2018}
+    \field{urlday}{17}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{hausman_specification_1984}{article}{}
+    \name{author}{2}{}{%
+      {{hash=HJ}{%
+         family={Hausman},
+         familyi={H\bibinitperiod},
+         given={Jerry},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={McFadden},
+         familyi={M\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJMD1}
+    \strng{fullhash}{HJMD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1984}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    Discrete choice models are now used in a variety of situations in applied
+  econometrics. By far the model specification which is used most often is the
+  multinomial logit model. Yet it is widely known that a potentially important
+  drawback of the multinomial logit model is the independence from irrelevant
+  alternatives property. While most analysts recognize the implications of the
+  independence of irrelevant alternatives property, it has remained basically a
+  maintained assumption in applications. In the paper we provide two sets of
+  computationally convenient specification tests for the multinomial logit
+  model. The first test is an application of the Hausman [10] specification
+  test procedure. The basic idea for the test here is to test the reverse
+  implication of the independence from irrelevant alternatives property. The
+  test statistic is easy to compute since it only requires computation of a
+  quadratic form which involves the difference of the parameter estimates and
+  the differences of the estimated covariance matrices. The second set of
+  specification tests that we propose is based on more classical test
+  procedures. We consider a generalization of the multinomial logit model which
+  is called the nested logit model. Since the multinomial logit model is a
+  special case of the more general model when a given parameter equals one,
+  classical test procedures such as the Wald, likelihood ratio, and Lagrange
+  multiplier tests can be used. The two sets of specification test procedures
+  care then compared for an example where exact and approximate comparisons are
+  possible.%
+    }
+    \verb{doi}
+    \verb 10.2307/1910997
+    \endverb
+    \field{issn}{0012-9682}
+    \field{number}{5}
+    \field{pages}{1219\bibrangedash 1240}
+    \field{title}{Specification {Tests} for the {Multinomial} {Logit} {Model}}
+    \verb{url}
+    \verb http://www.jstor.org/stable/1910997
+    \endverb
+    \field{volume}{52}
+    \field{journaltitle}{Econometrica}
+    \field{year}{1984}
+    \field{urlday}{10}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{hess_joint_2012}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HS}{%
+         family={Hess},
+         familyi={H\bibinitperiod},
+         given={Stephane},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {fre}%
+    }
+    \strng{namehash}{HS1}
+    \strng{fullhash}{HS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2012}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \verb{doi}
+    \verb 10.1007/s11116-011-9366-5
+    \endverb
+    \field{issn}{0049-4488}
+    \field{number}{3}
+    \field{pages}{593\bibrangedash 625}
+    \field{shorttitle}{A joint model for vehicle type and fuel type choice}
+    \field{title}{A joint model for vehicle type and fuel type choice: evidence
+  from a cross-nested logit study}
+    \field{volume}{39}
+    \verb{file}
+    \verb E-Tidsskrifter | A joint model for vehicle type and fuel type choice\
+    \verb : evidence from a cross-nested logit study:C\:\\Users\\thorn\\Zotero\
+    \verb \storage\\Z4RYRSZ7\\resolve.html:text/html
+    \endverb
+    \field{journaltitle}{Transportation}
+    \field{year}{2012}
+  \endentry
+
+  \entry{jong_discrete_2014}{incollection}{}
+    \name{author}{2}{}{%
+      {{hash=JGd}{%
+         family={Jong},
+         familyi={J\bibinitperiod},
+         given={Gerard\bibnamedelima de},
+         giveni={G\bibinitperiod\bibinitdelim d\bibinitperiod},
+      }}%
+      {{hash=KE}{%
+         family={Kroes},
+         familyi={K\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {Springer, Cham}%
+    }
+    \strng{namehash}{JGdKE1}
+    \strng{fullhash}{JGdKE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{abstract}{%
+    This chapter gives an overview of discrete choice analysis techniques.
+  First we present a reflection about the meaning of the words ‘discrete’
+  and ‘choice’. Then we provide an overview of the sorts of choices in
+  passenger and freight transport that have been treated as discrete choice
+  problems. The next section presents the basic random utility theory, upon
+  which most discrete choice models have been based. Different types of
+  discrete choice models are then discussed: the workhorse of discrete choice
+  modelling—the multinomial logit model (MNL), the nested logit and other
+  Generalised Extreme Value (GEV) models, the probit model, the mixed logit and
+  latent class models, ordered response models and aggregate logit models. Then
+  we briefly discuss the estimation of discrete choice models and their
+  application for demand forecasting and for policy simulation. The last
+  section contains a summary and conclusions and a discussion on the future
+  research directions.%
+    }
+    \field{booktitle}{Analytical {Decision}-{Making} {Methods} for {Evaluating}
+  {Sustainable} {Transport} in {European} {Corridors}}
+    \verb{doi}
+    \verb 10.1007/978-3-319-04786-7_8
+    \endverb
+    \field{isbn}{978-3-319-04785-0 978-3-319-04786-7}
+    \field{pages}{121\bibrangedash 142}
+    \field{series}{{SxI} - {Springer} for {Innovation} / {SxI} - {Springer} per
+  l'{Innovazione}}
+    \field{title}{Discrete {Choice} {Analysis}}
+    \verb{url}
+    \verb http://link.springer.com/chapter/10.1007/978-3-319-04786-7_8
+    \endverb
+    \verb{file}
+    \verb Full Text PDF:C\:\\Users\\thorn\\Zotero\\storage\\JE8F982M\\Jong og K
+    \verb roes - 2014 - Discrete Choice Analysis.pdf:application/pdf;Snapshot:C
+    \verb \:\\Users\\thorn\\Zotero\\storage\\AVBQXR47\\10.html:text/html
+    \endverb
+    \field{year}{2014}
+    \field{urlday}{24}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{koppelman_self_2006}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=KFS}{%
+         family={Koppelman},
+         familyi={K\bibinitperiod},
+         given={Frank\bibnamedelima S.},
+         giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Bhat},
+         familyi={B\bibinitperiod},
+         given={Chandra},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KFSBC1}
+    \strng{fullhash}{KFSBC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Self {Instructing} {Course} in {Mode} {Choice} {Modeling}:
+  {Multinomial} and {Nested} {Logit} {Models}}
+    \field{year}{2006}
+  \endentry
+
+  \entry{koppelman_closed_2000}{incollection}{}
+    \name{author}{2}{}{%
+      {{hash=KFS}{%
+         family={Koppelman},
+         familyi={K\bibinitperiod},
+         given={Frank\bibnamedelima S.},
+         giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=SV}{%
+         family={Sethi},
+         familyi={S\bibinitperiod},
+         given={Vaneet},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KFSSV1}
+    \strng{fullhash}{KFSSV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2000}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{Handbook of transport modelling}
+    \field{isbn}{978-0-08-043594-7}
+    \field{pages}{211\bibrangedash 227}
+    \field{title}{Closed form discrete-choice models}
+    \verb{url}
+    \verb https://trid.trb.org/view/677899
+    \endverb
+    \verb{file}
+    \verb Snapshot:C\:\\Users\\thorn\\Zotero\\storage\\AI29URD8\\677899.html:te
+    \verb xt/html
+    \endverb
+    \field{year}{2000}
+    \field{urlday}{09}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{luce_theory_1957}{thesis}{}
+    \name{author}{1}{}{%
+      {{hash=LRD}{%
+         family={Luce},
+         familyi={L\bibinitperiod},
+         given={R.\bibnamedelima Duncan},
+         giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRD1}
+    \strng{fullhash}{LRD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1957}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{A theory of individual choice behavior}
+    \verb{url}
+    \verb http://www.dtic.mil/get-tr-doc/pdf?AD=AD0130718
+    \endverb
+    \list{institution}{1}{%
+      {Columbia University}%
+    }
+    \field{type}{phdthesis}
+    \field{year}{1957}
+  \endentry
+
+  \entry{luce_probabilistic_1958}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LRD}{%
+         family={Luce},
+         familyi={L\bibinitperiod},
+         given={R.\bibnamedelima Duncan},
+         giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LRD1}
+    \strng{fullhash}{LRD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1958}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    A model for choices among uncertain alternatives is developed in which
+  preference between pure alternatives and likelihood judgments between events
+  areassumed to be independent probabilistic processes. It is, in some
+  respects, a probabilistic version of utility models of the von
+  Neumann-Morgenstern type. Certain plausible notions about subjective
+  probability are shown to imply a very simple discrimination function between
+  events in which the probability of choice depends only upon differences of
+  subjective probabilities. Similarly, the expected utility hypothesis is shown
+  to imply that preference discrimination depends upon utility differences, and
+  the form of that discrimination function is determined. Questions of
+  empirical verification are discussed.%
+    }
+    \verb{doi}
+    \verb 10.2307/1907587
+    \endverb
+    \field{issn}{0012-9682}
+    \field{number}{2}
+    \field{pages}{193\bibrangedash 224}
+    \field{title}{A {Probabilistic} {Theory} of {Utility}}
+    \verb{url}
+    \verb http://www.jstor.org/stable/1907587
+    \endverb
+    \field{volume}{26}
+    \field{journaltitle}{Econometrica}
+    \field{year}{1958}
+    \field{urlday}{29}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{luce_individual_2005}{book}{}
+    \name{author}{1}{}{%
+      {{hash=LRD}{%
+         family={Luce},
+         familyi={L\bibinitperiod},
+         given={R.\bibnamedelima Duncan},
+         giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {Courier Corporation}%
+    }
+    \keyw{Mathematics / Probability \& Statistics / General, Psychology /
+  Personality, Psychology / Psychotherapy / General, Self-Help / Motivational
+  \& Inspirational}
+    \strng{namehash}{LRD1}
+    \strng{fullhash}{LRD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2005}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    This influential treatise presents a mathematical analysis of choice
+  behavior. It begins with the statement of a general axiom, then explores
+  applications of the theory to substantive problems: psychophysics, utility,
+  and learning. Includes considerations of the Fechnerian assumption and signal
+  detectability theory; utility theory; stochastic theories; more. 1959
+  edition.%
+    }
+    \field{isbn}{978-0-486-44136-8}
+    \field{note}{Google-Books-ID: D74qAwAAQBAJ}
+    \field{shorttitle}{Individual {Choice} {Behavior}}
+    \field{title}{Individual {Choice} {Behavior}: {A} {Theoretical} {Analysis}}
+    \field{month}{01}
+    \field{year}{2005}
+  \endentry
+
+  \entry{mai_dynamic_2017}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MT}{%
+         family={Mai},
+         familyi={M\bibinitperiod},
+         given={Tien},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=FE}{%
+         family={Frejinger},
+         familyi={F\bibinitperiod},
+         given={Emma},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Fosgerau},
+         familyi={F\bibinitperiod},
+         given={Mogens},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Bastin},
+         familyi={B\bibinitperiod},
+         given={Fabian},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \keyw{Discrete choice, Dynamic programming, Maximum likelihood estimation,
+  Multivariate extreme value models, Nested fixed point algorithm, Value
+  iteration}
+    \strng{namehash}{MT+1}
+    \strng{fullhash}{MTFEFMBF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    We propose a way to estimate a family of static Multivariate Extreme Value
+  (MEV) models with large choice sets in short computational time. The
+  resulting model is also straightforward and fast to use for prediction.
+  Following Daly and Bierlaire (2006), the correlation structure is defined by
+  a rooted, directed graph where each node without successor is an alternative.
+  We formulate a family of MEV models as dynamic discrete choice models on
+  graphs of correlation structures and show that the dynamic models are
+  consistent with MEV theory and generalize the network MEV model (Daly and
+  Bierlaire, 2006). Moreover, we show that these models can be estimated
+  quickly using the concept of network flows and the nested fixed point
+  algorithm (Rust, 1987). The main reason for the short computational time is
+  that the new formulation allows to benefit from existing efficient solution
+  algorithms for sparse linear systems of equations. We present numerical
+  results based on simulated data with varying number of alternatives and
+  nesting structures. We estimate large models, for example, a cross-nested
+  model with 200 nests and 500,000 alternatives and 210 parameters that needs
+  between 100–200 iterations to converge (4.3 h on an Intel(R) 3.2 GHz
+  machine using a non-parallelized code). We also show that our approach allows
+  to estimate a cross-nested logit model of 111 nests with a real data set of
+  more than 100,000 observations in 14 h.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.trb.2016.12.017
+    \endverb
+    \field{issn}{0191-2615}
+    \field{pages}{179\bibrangedash 197}
+    \field{title}{A dynamic programming approach for quickly estimating large
+  network-based {MEV} models}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S0191261515302216
+    \endverb
+    \field{volume}{98}
+    \verb{file}
+    \verb ScienceDirect Full Text PDF:C\:\\Users\\thorn\\Zotero\\storage\\PTCV7
+    \verb G8B\\Mai m.fl. - 2017 - A dynamic programming approach for quickly es
+    \verb timat.pdf:application/pdf;ScienceDirect Snapshot:C\:\\Users\\thorn\\Z
+    \verb otero\\storage\\2AIDEB6W\\S0191261515302216.html:text/html
+    \endverb
+    \field{journaltitle}{Transportation Research Part B: Methodological}
+    \field{month}{04}
+    \field{year}{2017}
+    \field{urlday}{10}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{mcfadden_conditional_1973}{incollection}{}
+    \name{author}{1}{}{%
+      {{hash=MDL}{%
+         family={McFadden},
+         familyi={M\bibinitperiod},
+         given={Daniel\bibnamedelima L.},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic Press}%
+    }
+    \strng{namehash}{MDL1}
+    \strng{fullhash}{MDL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1973}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    Introducing the MNL model%
+    }
+    \field{booktitle}{Frontiers in {Econometrics}}
+    \field{pages}{105\bibrangedash 142}
+    \field{title}{Conditional {Logit} {Analysis} of {Qualitative} {Choice}
+  {Behavior}}
+    \list{location}{1}{%
+      {New York}%
+    }
+    \field{annotation}{%
+    Introducing the MNL model%
+    }
+    \field{year}{1973}
+  \endentry
+
+  \entry{mcfadden_modelling_1977}{report}{}
+    \name{author}{1}{}{%
+      {{hash=MDL}{%
+         family={McFadden},
+         familyi={M\bibinitperiod},
+         given={Daniel\bibnamedelima L.},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{MDL1}
+    \strng{fullhash}{MDL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1977}
+    \field{extrayear}{1}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    No abstract is available for this item.%
+    }
+    \field{number}{477}
+    \field{title}{Modelling the {Choice} of {Residential} {Location}}
+    \verb{url}
+    \verb https://ideas.repec.org/p/cwl/cwldpp/477.html
+    \endverb
+    \list{institution}{1}{%
+      {Cowles Foundation for Research in Economics, Yale University}%
+    }
+    \verb{file}
+    \verb Fullext PDF:C\:\\Users\\thorn\\Zotero\\storage\\LIUBB5GP\\McFadden -
+    \verb 1977 - Modelling the Choice of Residential Location.pdf:application/p
+    \verb df;Snapshot:C\:\\Users\\thorn\\Zotero\\storage\\EGSR2XS6\\477.html:te
+    \verb xt/html
+    \endverb
+    \field{type}{techreport}
+    \field{year}{1977}
+    \field{urlday}{03}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{mcfadden_revealed_2005}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MDL}{%
+         family={McFadden},
+         familyi={M\bibinitperiod},
+         given={Daniel\bibnamedelima L.},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MDL1}
+    \strng{fullhash}{MDL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{2005}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    The problem of revealed stochastic preference is whether probability
+  distributions of observed choices in a population for various choice
+  situations are consistent with a hypothesis of maximization of preference
+  preorders by members of the population. This is a population analog of the
+  classical revealed preference problem in economic consumer theory. This paper
+  synthesizes the solutions to this problem that have been obtained by Marcel
+  K. Richter and the author, and by J. C. Falmagne, in the case of finite sets
+  of alternatives, and utilizes unpublished research of Richter and the author
+  to give results for the non-finite choice sets encountered in economic
+  consumer theory.%
+    }
+    \field{issn}{0938-2259}
+    \field{number}{2}
+    \field{pages}{245\bibrangedash 264}
+    \field{shorttitle}{Revealed {Stochastic} {Preference}}
+    \field{title}{Revealed {Stochastic} {Preference}: {A} {Synthesis}}
+    \verb{url}
+    \verb http://www.jstor.org.ep.fjernadgang.kb.dk/stable/25055949
+    \endverb
+    \field{volume}{26}
+    \verb{file}
+    \verb JSTOR Full Text PDF:C\:\\Users\\thorn\\Zotero\\storage\\XZEB3ZM9\\McF
+    \verb adden - 2005 - Revealed Stochastic Preference A Synthesis.pdf:applica
+    \verb tion/pdf
+    \endverb
+    \field{journaltitle}{Economic Theory}
+    \field{year}{2005}
+    \field{urlday}{10}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{mcfadden_quantitative_1977}{report}{}
+    \name{author}{1}{}{%
+      {{hash=MD}{%
+         family={McFadden},
+         familyi={M\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MD1}
+    \strng{fullhash}{MD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{labelyear}{1977}
+    \field{extrayear}{2}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    This paper is concerned with quantitative methods for the analysis of
+  travel behaviour of individuals. It reviews some of the recent developments
+  in model specification, estimation, model evaluation and testing, and
+  aggregation and forecasting. Topics in model specification include the
+  multinomial probit model and its computation, and generalized extreme value
+  models and their relation to sequential models. Topics in estimation methods
+  include the use of choice-based samples, sample designs, and incomplete
+  choice sets. Model evaluation topics include prediction success tables and
+  diagnostic tests of specification. Aggregation and forecasting topics include
+  aggregation by the Clark method, synthesis of the distribution of explanatory
+  variables, and the calculus of demand elasticities.%
+    }
+    \field{number}{474}
+    \field{shorttitle}{Quantitative {Methods} for {Analyzing} {Travel}
+  {Behaviour} of {Individuals}}
+    \field{title}{Quantitative {Methods} for {Analyzing} {Travel} {Behaviour}
+  of {Individuals}: {Some} {Recent} {Developments}}
+    \verb{url}
+    \verb https://econpapers.repec.org/paper/cwlcwldpp/474.htm
+    \endverb
+    \list{institution}{1}{%
+      {Cowles Foundation for Research in Economics, Yale University}%
+    }
+    \verb{file}
+    \verb RePEc PDF:C\:\\Users\\thorn\\Zotero\\storage\\GCDGVUZM\\McFadden - 19
+    \verb 77 - Quantitative Methods for Analyzing Travel Behaviou.pdf:applicati
+    \verb on/pdf;RePEc Snapshot:C\:\\Users\\thorn\\Zotero\\storage\\RMIW8ZLE\\4
+    \verb 74.html:text/html
+    \endverb
+    \field{type}{Cowles {Foundation} {Discussion} {Paper}}
+    \field{year}{1977}
+    \field{urlday}{30}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{newman_computational_2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=NJP}{%
+         family={Newman},
+         familyi={N\bibinitperiod},
+         given={Jeffrey\bibnamedelima P.},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=LV}{%
+         family={Lurkin},
+         familyi={L\bibinitperiod},
+         given={Virginie},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=GLA}{%
+         family={Garrow},
+         familyi={G\bibinitperiod},
+         given={Laurie\bibnamedelima A.},
+         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \keyw{Airline itinerary choice models, Discrete choice models,
+  Semi-aggregate data}
+    \strng{namehash}{NJP+1}
+    \strng{fullhash}{NJPLVGLA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{abstract}{%
+    We present a summary of important computational issues and opportunities
+  that arise from the use of semi-aggregate data (where the explanatory data
+  for choice scenarios are not necessarily unique for each decision-maker) in
+  discrete choice models. These data are encountered with large transactional
+  databases that have limited consumer information, a common feature in some
+  transportation planning applications, such as airline itinerary choice
+  modeling. We developed a freeware software package called Larch, written in
+  Python and C++, to take advantage of these kind of data to greatly speed the
+  estimation of discrete choice model parameters. Benchmarking experiments
+  against Stata (a commonly used commercial package), Biogeme (a commonly used
+  freeware package), and ALOGIT (a highly specialized commercial package for
+  discrete choice modeling) based on an industry dataset for airline itinerary
+  choice modeling applications shows that the size of the input estimation
+  files are 50–100 times larger in Stata and Biogeme, respectively.
+  Estimation times are also much faster in ALOGIT and Larch; e.g., for a small
+  itinerary choice problem, a multinomial logit model estimated in ALOGIT or
+  Larch converged in less than one second whereas the same model took almost 15
+  seconds in Stata and more than three minutes in Biogeme.%
+    }
+    \field{number}{C}
+    \field{pages}{28\bibrangedash 40}
+    \field{title}{Computational methods for estimating multinomial, nested, and
+  cross-nested logit models that account for semi-aggregate data}
+    \verb{url}
+    \verb https://ideas.repec.org/a/eee/eejocm/v26y2018icp28-40.html
+    \endverb
+    \field{volume}{26}
+    \verb{file}
+    \verb Snapshot:C\:\\Users\\thorn\\Zotero\\storage\\QS8Q3GAR\\v26y2018icp28-
+    \verb 40.html:text/html
+    \endverb
+    \field{journaltitle}{Journal of choice modelling}
+    \field{year}{2018}
+    \field{urlday}{10}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{papola_developments_2004}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PA}{%
+         family={Papola},
+         familyi={P\bibinitperiod},
+         given={Andrea},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {fre}%
+    }
+    \strng{namehash}{PA1}
+    \strng{fullhash}{PA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2004}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1016/j.trb.2003.11.001
+    \endverb
+    \field{issn}{0191-2615}
+    \field{number}{9}
+    \field{pages}{833\bibrangedash 851}
+    \field{title}{Some developments on the cross-nested logit model}
+    \field{volume}{38}
+    \verb{file}
+    \verb E-Tidsskrifter | Some developments on the cross-nested logit model:C\
+    \verb :\\Users\\thorn\\Zotero\\storage\\H9TLICRY\\resolve.html:text/html
+    \endverb
+    \field{journaltitle}{Transportation research. Part E, Logistics and
+  transportation review}
+    \field{year}{2004}
+  \endentry
+
+  \entry{richter_revealed_1966}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RMK}{%
+         family={Richter},
+         familyi={R\bibinitperiod},
+         given={Marcel\bibnamedelima K.},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RMK1}
+    \strng{fullhash}{RMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1966}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.2307/1909773
+    \endverb
+    \field{issn}{0012-9682}
+    \field{number}{3}
+    \field{pages}{635\bibrangedash 645}
+    \field{title}{Revealed {Preference} {Theory}}
+    \verb{url}
+    \verb http://www.jstor.org/stable/1909773
+    \endverb
+    \field{volume}{34}
+    \verb{file}
+    \verb JSTOR Full Text PDF:C\:\\Users\\thorn\\Zotero\\storage\\8EDURP6Q\\Ric
+    \verb hter - 1966 - Revealed Preference Theory.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Econometrica}
+    \field{year}{1966}
+    \field{urlday}{10}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{train_discrete_2009}{book}{}
+    \name{author}{1}{}{%
+      {{hash=TKE}{%
+         family={Train},
+         familyi={T\bibinitperiod},
+         given={Kenneth\bibnamedelima E.},
+         giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \keyw{Business \& Economics / Econometrics, Business \& Economics /
+  Statistics, Mathematics / Probability \& Statistics / General}
+    \strng{namehash}{TKE1}
+    \strng{fullhash}{TKE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{abstract}{%
+    This book describes the new generation of discrete choice methods, focusing
+  on the many advances that are made possible by simulation. Researchers use
+  these statistical methods to examine the choices that consumers, households,
+  firms, and other agents make. Each of the major models is covered: logit,
+  generalized extreme value, or GEV (including nested and cross-nested logits),
+  probit, and mixed logit, plus a variety of specifications that build on these
+  basics. Recent advances in Bayesian procedures are explored, including the
+  use of the Metropolis-Hastings algorithm and its variant Gibbs sampling. This
+  second edition adds chapters on endogeneity and expectation-maximization (EM)
+  algorithms. No other book incorporates all these fields, which have arisen in
+  the past 25 years. The procedures are applicable in many fields, including
+  energy, transportation, environmental studies, health, labor, and marketing.%
+    }
+    \field{isbn}{978-1-139-48037-6}
+    \field{note}{Google-Books-ID: 4yHaAgAAQBAJ}
+    \field{title}{Discrete {Choice} {Methods} with {Simulation}}
+    \field{month}{06}
+    \field{year}{2009}
+  \endentry
+
+  \entry{williams_formation_1977}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WHCWL}{%
+         family={Williams},
+         familyi={W\bibinitperiod},
+         given={H.\bibnamedelima C. W.\bibnamedelima L.},
+         giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod
+  W\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \strng{namehash}{WHCWL1}
+    \strng{fullhash}{WHCWL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1977}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{abstract}{%
+    This paper examines a variety of issues within the context of two main
+  themes: the formation of travel demand models and economic evaluation
+  measures which are mutually consistent within a theory of rational choice;
+  and a consideration of the structure of models which are representations of
+  the trip decision process over several dimensions: location, mode, and route.
+  Random utility theory is invoked to explore both the role and properties of
+  composite costs or index prices in the ‘recursive’ approach to the
+  structuring of travel choice models, and their significance in the economic
+  evaluation problem. It is shown that the specification of these costs must be
+  made very precisely, with respect to the demand model form chosen, in order
+  to retain the underlying assumption that the traveller is an optimal
+  decisionmaker. It is argued that the structure of ‘simultaneous’ models
+  currently in use is inconsistent with the form of utility function assumed to
+  generate those models. Furthermore, it is shown that the ‘simultaneous’
+  and ‘recursive’ forms are special cases of a more general choice model
+  structure which takes specific account of correlation or ‘commonality’ of
+  trip attributes., A number of applications are discussed in which consistent
+  demand models and perceived user benefit measures are constructed. These
+  include the formation of strategic transport planning models and of models
+  for mixed-mode, multimode, and multiroute systems. The formalism allows
+  definitive answers to be given to a number of problems of current interest in
+  transportation planning, which have been incorrectly or incompletely
+  treated.%
+    }
+    \verb{doi}
+    \verb 10.1068/a090285
+    \endverb
+    \field{issn}{0308-518X}
+    \field{number}{3}
+    \field{pages}{285\bibrangedash 344}
+    \field{title}{On the {Formation} of {Travel} {Demand} {Models} and
+  {Economic} {Evaluation} {Measures} of {User} {Benefit}}
+    \verb{url}
+    \verb https://doi.org/10.1068/a090285
+    \endverb
+    \field{volume}{9}
+    \verb{file}
+    \verb SAGE PDF Full Text:C\:\\Users\\thorn\\Zotero\\storage\\7YPF8T9B\\Will
+    \verb iams - 1977 - On the Formation of Travel Demand Models and Econo.pdf:
+    \verb application/pdf
+    \endverb
+    \field{journaltitle}{Environment and Planning A: Economy and Space}
+    \field{annotation}{%
+    Introducing the NL model%
+    }
+    \field{month}{03}
+    \field{year}{1977}
+    \field{urlday}{09}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
+  \endentry
+\endsortlist
+\endinput

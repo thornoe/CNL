@@ -1,0 +1,14 @@
+
+
+% \subsection{Estimation results}
+% In order to increase the predictability it would be necessary to include more background variables through merging the DREAM dataset with registries such as TIMES from Statistics Denmark containing background variables like prior income. A first issue would be that it is practically impossible to write Python code on the servers of Statistics Denmark, another issue is the trade-off between estimation time and the level of detail in terms of the number of regressors.
+
+\subsection{Results}
+We manage with some success to estimate CNL parameters even with low-performance estimation techniques, however the convergence of these methods is highly dependent on their initiation state, and the data at hand. For future work estimators must be implemented in a faster language, which is more suitable for heavy computation. Given that one does implement CNL in a better framework however, there are plenty opportunities for research, either into the interpretation of model output, or in the behavior in the model under various types of biases and data.
+\\ \\
+When applying the model to real data, we're faced with the issue of interpretability, and resort to the AIC for our conclusions. Using the Akaike Information Criterion we find some evidence of nesting in the choices of individuals who have been on sick leave, and in particular find that there is an "unemployment nest" in the choice structure. How robust these results are is difficult to say, given the complexity of the model, and future work could investigate the validity of conclusion drawn on the basis of NL and CNL models.
+
+\subsection{Usability and interpretability of CNL}
+While CNL will surely have applications in some areas of economics and other sciences, it is unlikely to gain widespread use, as estimation is restricted to a few software packages, which are relatively poorly documented and extremely difficult to modify. Implementing a maximum likelihood estimator of the likelihood is feasible for experts, but doing so will sacrifice transparency of methodology. A recent paper by \citet{mai_dynamic_2017} suggests borrowing methodology from the field of dynamic programming for estimation, and development of pre-coded solutions for these methods can possibly increase accessibility to the GEV models.
+\\ \\
+Advances in computation will however not make interpretation of results easier, and from the figures \ref{fig: marginalities} and from the marginal effects in equation \eqref{eq: marginaleffects} it is clear that marginal effects are not guaranteed to be monotone in neither parameters or regressors, making truthful reporting very difficult.

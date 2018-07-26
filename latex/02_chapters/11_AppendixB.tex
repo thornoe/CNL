@@ -1,0 +1,19 @@
+%%% File encoding is ISO-8859-1 (also known as Latin-1)
+%%% You can use special characters just like �,� and �
+
+\FloatBarrier
+\section{On vectorization of cross nested models}
+\label{app: vectorization}
+
+There are a few different ways of implementing computationally heavy functions in high level languages such as R, Python etc. The go-to method is vectorization, but other alternatives, such as JIT compilation, libraries like Cython and code parallelization. In the creation of this paper we optet for the vectorization approach, as the Numpy library offers very simple and very powerful vectorization. However as cross nested logit allows cross nesting, this turn out to be problematic.
+\\ \\
+First consider that our data is generated as:
+\\ \\
+\begin{minipage}[t]{0.8\textwidth}
+\texttt{for each individual $k$, for each nest $m$ create a row, indexed by $c\in \mathcal{C}$, for each option in $m$}
+\end{minipage}
+\vspace{0.8cm}
+
+This entails that all cross nested choices $c_{\times}$ will occur once for each nest they're accessible from. Now note that calculating probabilities for simulation purposes involve the $\beta$ matrix, which has one row per choice in the choice set $\mathcal{C}$. This is exactly the challenge: in the data we have more rows than there are choices, because of duplicates arising from cross nesting. In the parameter matrix we do not, yet these two must be multiplied together.
+\\ \\
+We handle this by also duplicating the relevant rows in $\beta$, and consequently "masking" them from the results by multiplying with a boolean vector indicating the individuals actual choice. This method, while valid, produces quite some overhead and is therefore to be avoided if possible. For future work we therefore suggest looking at Cython as a starting point.

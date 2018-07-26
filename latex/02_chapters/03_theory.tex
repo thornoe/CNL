@@ -1,0 +1,435 @@
+In this section we first take a look at a simple multinomial choice model and its assumption about equal competition among all pairs of alternatives, after which we relax this assumption and look at two different choice models that allows for cases where it is expected that some pairs of alternatives compete more closely than others.
+
+By using a recurrent analogy of a commuter's classic choice of transport we throughout complement the theory with a more intuitive examination of the growingly complex substitution patterns for extending the choice structure from the \textit{Multinomial Logit} (MNL) over the \textit{Nested Logit} (NL) to the \textit{Cross-nested Logit} (CNL) model.
+
+\subsection{Random Utility Models (RUM's)}
+Common for all choice models related to the cross-nested logit is that they build on Random Utility Models (RUM's) which forecast discrete choices based on the assumption that all individuals $q$ seek to maximize utility from the choices they make $i$. While classic utility and consumer theory has been mostly limited to scale predictions of continuous character (e.g. for prices and quantities) up until the formalization of the probabilistic approach by R. Duncan Luce (\citeyear{luce_theory_1957}; \citeyear{luce_probabilistic_1958}) which is necessary for discrete choices in general and for multinomial choices especially. Here the "randomness" of the RUM term comes into play as we are aware that we cannot perfectly predict the utility of a choice for each individual, thus, we include a stochastic random error term \citep{mcfadden_revealed_2005}, $\varepsilon_{iq}$, for each individual $q$ and choice $i$ to correct for the fact that we as analysts lack information and understanding of the utility for each individual. Formally the utility $U_{iq}$ is composed by a deterministic component $V_{iq}$ and noise $\varepsilon_{iq}$ so that
+  \begin{equation} \label{eq: utility_general}
+    U_{iq} = V_{iq} + \varepsilon_{iq}
+  \end{equation}
+For now let the subscripts denote choice $i$ and individual $q$, but note that the individual subscript will soon be taken as given and thus dropped to not get lost in the notation when we add a nest-subscript.
+\\ \\
+The fundamental assumption of utility-maximization makes RUM's applicable for analyzing a lot of different human-choice-problems and advanced RUM's are heavily used in e.g. traffic research and route choice problems. Because of the similarities between the econometric models and economic theory the random utility models are also used extensively in microeconomics. It can be noted though, that the general necessity of representing preferences by utility functions of observed quantities in economic theory does impose a limit on how the field can develop as preferences that is somehow revealed can be analyzed (\cite{richter_revealed_1966}).
+\\ \\
+A first step in converting the idea of random utility into actual econometrics is to assume some analytical and data driven description of $V_{iq}$. Although there are alternatives we will keep to the by far most common formulation in this paper, namely that $V_{iq}$ is linear in parameters, such that the deterministic component of the utility $V_{iq}$ is given by
+
+  \begin{equation*}
+    V_{iq} = \beta_{i}^0 + \sum_{k=1}^K \beta_{ik} x_{iqk}
+  \end{equation*}
+Note though, that whether a constant $\beta_i^0$ is included and for that matter if it is allowed to vary between alternatives (subscript $i$) is dependent on the model specification. Determining the minimal necessary restrictions on parameters that is required for identification is not trivial in the nested and cross-nested models. To ease the readability we through this paper takes the individual's $q$ subscripts for given and drops it while we instead of a sum over $k$ parameters and regressors write the second part of the equation vector form, thus, also drop the $k$ subscript and write the deterministic utility as
+
+  \begin{equation} \label{eq: deterministic_general}
+    V_{i} = \beta_{i}^0 + \beta_{i}x_{i}
+  \end{equation}
+Where $x_i$ can simply be $x$ if the regressors are alternative-invariant (see the end of section \ref{sec: MNL}). The linear deterministic model (\ref{eq: deterministic_general}) as well as any non-linear form of $V_i$ is unable to fully capture all of the variables that influences the individual's utility gain for a choice. Therefore, a degree of \textit{randomness} is introduced by letting the individual utility $U_{iq}$ for the occurence that the individual $q$ chooses alternative $i$ be given by equation (\ref{eq: utility_general}).
+Thus, in addition to the deterministic term $V_{iq}$ the stochastic distribution of the random error terms $\varepsilon_i$'s in the complete choice set $\mathcal{C}$ have to be assumed. \citet{mcfadden_modelling_1977} shows that assuming a joint error distribution
+
+\begin{equation} \label{eq: epsilon_general}
+F_{\epsilon_1,...,\epsilon_J}(y_1, ...y_J) = \exp (-G(e^{-y_1}, ..., e^{-y_J})),\ \ \ 1,...,J=\mathcal{C}
+\end{equation}
+and implementing suitable requirements on the generating function $G$ gives access to a broad class of models which are consistent with the random utility specification.
+
+
+\subsection{Simple discrete choice structures}
+The discrete choice models taken into account in this paper model the probability that an individual $q$ given a set of $k$ characteristics $x_{qk}$ chooses an alternative $i$ over each of the remaining alternatives in the choice set $\mathcal{C}$.
+
+Discrete choice models are relevant for analyzing effects of policy that would aim at altering the probability that an individual $q$ chooses a specific alternative $i$ by e.g. affecting the determining variables $x_{qk}$, which options that are in the choice set $\mathcal{C}$, or directly affecting the attractiveness of an alternative $i$ or $l \neq i$. Thus, it is crucial in what way the probability of a choice is estimated in relation to the probability of choosing the remaining alternatives, i.e. the assumptions about the structure of the choice set. %In econometric terms this is decided by the assumptions about the distribution of random error terms across the different alternatives \citep{wen_generalized_2001}.
+
+
+\subsubsection{The Multinomial Logit model (MNL)} \label{sec: MNL}
+The Multinomial Logit model (MNL) was introduced by Daniel McFadden (\citeyear{mcfadden_conditional_1973}) and is the most widely used econometric model for discrete choices between more than two alternatives. It builds on the RUM (\ref{eq: deterministic_general}) and by letting the random error term in equation (\ref{eq: utility_general}) be independently and identically Gumbel distributed across alternatives (\cite{koppelman_closed_2000}) we get the MNL model. Letting $\mathcal{J}$ be a stochastic variable with support on the choice set $\mathcal{C}$ of an utility maximizing agent, and $i$ the realization of $\mathcal{J}$ we get the probability that alternative $i$ is choosen by individual $q$
+  \begin{equation*}
+    \textrm{Pr}_q(\mathcal{J}=i|\mathcal{C})=
+    \frac{e^{V_{iq}}}{\sum\limits_{j\in\mathcal{C}}e^{V_{jq}}}
+  \end{equation*}
+Taking the $q$ subscripts as given and thus dropping them we correspondingly get the notation below that we will use onwards, or simply written $\textrm{Pr}(i|\mathcal{C})$ which will be used interchangeably.
+\begin{equation} \label{eq: MNL_general}
+  \textrm{Pr}(\mathcal{J}=i|\mathcal{C})=
+  \frac{e^{V_{i}}}{\sum\limits_{j\in\mathcal{C}}e^{V_{j}}}
+\end{equation}
+The ratio of probabilities is used to compare the probability of a choice $i$ relative to the probability of choosing some base alternative $l$
+  \begin{equation} \label{eq: MNL_relative}
+  \begin{split}
+    \frac{\textrm{Pr}_q(\mathcal{J}=i|\mathcal{C})}{\textrm{Pr}_q(\mathcal{J}=l|\mathcal{C})}
+    =\frac{e^{V_{i}}/\sum\limits_{j\in\mathcal{C}}e^{V_{j}}}{e^{V_{l}}/\sum\limits_{j\in\mathcal{C}}e^{V_{j}}} =\frac{e^{V_{i}}}{e^{V_{l}}}
+  \end{split}
+  \end{equation}
+Which is identical to that of the Binary Logit Model  \citep{cameron_microeconometrics:_2005}.
+\\ \\
+As the probability functions only incorporate the deterministic component of the RUM function \eqref{eq: utility_general}, $V_{iq}$, we should think of the probabilities $\forall i\in \mathcal{C}:\ \textrm{Pr}_q(i|\mathcal{C})$ that an individual $q$ with a certain set of characteristics $x_q$ chooses each of the alternatives $i$ in the choice set $\mathcal{C}$, such that these probabilities effectively \textit{"reflect the population probabilities that people with the given set of characteristics and facing the same set of alternatives choose each of the alternatives"} \citep{koppelman_self_2006}.
+% \\ \\
+% The notation and formulas through this paper are for a broad understanding of the MNL model where for an individual each regressor is allowed to either vary or be constant across alternatives.
+%
+% The use of the term MNL model (MNL) is at times used for the case where the regressors $x=x_q$ are alternative-invariant, thus, only varies over individuals $q$ but are constant across alternative $i$. This narrow understanding would allow to distinguish between the MNL and the corresponding \textit{Conditional Logit model} with alternative-variant regressors $x=x_{iq}$ and the \textit{Mixed Logit model} with both alternative-invariant as well as alternative-variant regressors $x_q,x_{iq}$ \citep{cameron_microeconometrics:_2005}. Through this paper we in general do not distinguish between these three distinctions of the general MNL.
+%
+% Likewise, the following general formulations of the Nested Logit model, Cross-nested Logit model and the GEV-model class in general are all formulated in order to also allow for  alternative-variant regressors, though, the data (both synthetic and real) we end up applying it to only contain alternative-invariant variables.
+%
+% As we will get back to, taking the marginal effect or elasticity with respect to an alternative-invariant regressor (like $gender$, $age$, or $distance$ between home and workplace) actually complicates the derivations and interpretations as compared to common examples (\cite{koppelman_closed_2000}; \cite{koppelman_self_2006}; \cite{train_discrete_2009}) where marginal effects and elasticities are derived wrt. an alternative-invariant regressor (e.g. the \textit{ticket-price} for busses or the \textit{gasoline-cost} for private autos).
+
+\subsubsection{Independence of Irrelevant Alternatives (IIA)} \label{subsec: IIA}
+\citet{mcfadden_conditional_1973} purposedly constructed the MNL model in order to fulfill the axiomatic idea that \textit{"the relative odds of one alternative being chosen over a second should be independent of the presence or absence of unchosen third alternatives"} which is clearly seen by equation \ref{eq: MNL_relative} above. This axiom was first introduced as the \textit{Independence of Irrelevant Alternatives} (IIA) by Kenneth J. \cite{arrow_difficulty_1950} for a particular choice context. The axiom of IIA was popularized in 1959 by R. Duncan Luce (\nth{2} ed. \citeyear{luce_individual_2005}) while he found it more precise to rename it \textit{Independence from Irrelevant Anternatives}" to avoid the misinterpretation that two irrelevant alternatives should be independent of one another while it is the ratio of probabilities between a pair of alternatives that should be independent from including or excluding irrelevant alternatives. A slightly more intuitive way to put it is that the IIA-axiom is the assumption that there is equal competition between all pairs of alternatives, thus no pair of alternatives compete more closely than other pairs \citep{koppelman_self_2006}.
+
+While this assumption turns out to be relevant for many cases, the IIA assumption is very strict and MNL estimates will be biased and give incorrect predictions when the assumption is not true, i.e. when the inclusion of other alternatives is indeed not irrelevant.
+\\ \\
+In appendix \ref{sec: MNL_example} we thoroughly show the implications of assuming \textit{Independence of Irrelevant Alternatives} (IIA) by a commuting example.
+
+\subsection{The Generalized Extreme Value model class (GEV)} \label{seq: GEV}
+A generalized framework for models similar to the logit is the class of Generalized Extreme Value (GEV) models. The main benefit of this formulation is that it allows a general pattern for choice probabilities while providing closed form solutions for the probability of choosing each alternative \citep{mcfadden_modelling_1977}. The core of the class is a generating function G:
+  \begin{equation} \label{eq: G-properties}
+  G(y_1, y_2, ..., y_J)\ \in \ \mathbb{R}^J_{+}
+  \end{equation}
+belonging to a class $\mathcal{G}$ of functions that has the following properties:
+\begin{itemize}
+  \item[1.] $G \in \mathcal{G}$ is nonnegative, differentiable and homogeneous of degree $\mu>0$.
+  \item[2.] $\forall j \in \mathcal{C}: \ \lim\limits_{y_j \rightarrow \infty} G(\cdots) = \infty$,\ \ \  $\mathcal{C}=1,...,J$
+  \item[3.] The $l$th partial derivative of $G$: $\frac{\partial^l G}{\prod_i \partial y_i}$ is nonnegative if $l$ is odd, and non-positive if $l$ is even. Here $J$ is the number of alternatives, and each $y_j$ a non-negative variable associated with choice $j$.
+\end{itemize}
+McFadden \citeyear{mcfadden_modelling_1977} shows that this specification implies that the GEV models are consistent with utlity maximization in the sense described in the RUM section above, and derives the probability
+  \begin{equation} \label{eq: simpleprob}
+    \textrm{Pr}(\mathcal{J} = i| \mathcal{C}) = \frac{e^{V_i} \frac{\partial G}{\partial y_i} (e^{V_1}, e^{V_2}, ..., e^{V_J}) }{\mu G(e^{V_1}, e^{V_2}, ..., e^{V_J})},\ \ \ i\in\mathcal{C}=1,...,J
+  \end{equation}
+Where $V_j$ is the deterministic element of utility which is observed by the researchers and/or parametrized by some known function e.g. given by equation (\ref{eq: deterministic_general}) or any non-linear functional form. $\mu$ is the degree of homogeneity of $G(\cdot)$. How $G(\cdots)$ is then defined gives rise to a variety of models, including the regular \textit{Multinomial Logit} model when $G(y_1, ..., y_J) = \sum_{j=1}^J y_j$. However all functions $G \in \mathcal{G}$ are valid, and generalized specifications lead to the \textit{Nested}- or \textit{Cross-nested} logit models among others.
+\\ \\
+A first thing to notice is that using Eulers theorem of homogeneous functions\footnote{Let $f(\bm{z})$ be a homogeneous function of degree $q$ such that $f(t\bm{z}) = t^{q} \cdot f(\bm{z})$. $\bm{z}$ is a vector of $i$ variables denoted $z_i$. Eulers theorem then simply states that $\sum_{i} z_i f'_{z_i}(\bm{z}) = q f(\bm{z})$} on $G$ we have that
+  \begin{equation}
+ \mu  G(e^{V_1}, e^{V_2}, ..., e^{V_J}) = \sum\limits_{j=1}^J e^{V_j} \frac{\partial G}{\partial e^{V_j}}(e^{V_1}, e^{V_2}, ..., e^{V_J})
+  \end{equation}
+By redefining $z_i=e^{V_i}$ the probability in \eqref{eq: simpleprob} can be re-expressed as
+
+  \begin{equation} \label{eq: probevolutionone}
+   \textrm{Pr}(\mathcal{J} = i| \mathcal{C}) = \frac{z_i \frac{\partial G}{\partial z_i} }{\sum\limits_{j \in \mathcal{C}} z_j \frac{\partial G}{\partial z_j} }
+  \end{equation}
+This expression should remind one of the equivalent expression encountered when deriving the ordinary logit model, and it will in turn be clear that the MNL (\ref{eq: MNL_general}) can be expressed as a GEV such that $\partial G / \partial z_i = 1$.
+Notice further that $z_i \frac{\partial G}{\partial z_i} = e^{V_i}\frac{\partial G}{\partial z_i} = e^{\ln(e^{V_i} \frac{\partial G}{\partial z_i})} = e^{V_i + \ln \frac{\partial G}{\partial z_i}}$ why we can also write \eqref{eq: probevolutionone} as
+
+  \begin{equation} \label{eq: probevolutiontwo}
+   \textrm{Pr}(\mathcal{J} = i|\mathcal{C}) = \frac{e^{V_i + \ln \frac{\partial G}{\partial z_i} }}{ \sum\limits_{j \in \mathcal{C}} e^{V_j + \ln \frac{\partial G}{\partial z_j}} }
+  \end{equation}
+Like above this expression is immediately similar to the one known from the MNL model when setting the partial derivative og $G$ equal to 1. \citep{bierlaire_theoretical_2006}
+
+% \subsubsection{The MNL model in the GEV framework}
+% The Multinomial Logit (MNL) is perhaps the simplest of the GEV class models, and as mentioned above setting the derivative of $G$ equal to one collapses the expression of $Pr(\mathcal{J} = i)$ to that from the MNL (\ref{eq: MNL_general}). The reason for this is that setting $G_{\textrm{MNL}}(\cdots) = \sum\limits_{j \in \mathcal{C}} e^{V_j}$ gives exactly the MNL since $\forall i: \ \frac{\partial}{\partial e^{V_i}} G_{\textrm{MNL}} = 1$, as the expression in \eqref{eq: probevolutiontwo} collapses to the MNL model
+%
+%   \begin{equation}  \label{eq: MNL_probevolutiontwo}
+%     \textrm{Pr}(\mathcal{J} = i|\mathcal{C}) = \frac{e^{V_i + \ln \frac{\partial G}{\partial z_i} }}{ \sum\limits_{j \in \mathcal{C}} e^{V_j + \ln \frac{\partial G}{\partial z_j}} }
+%     = \frac{e^{V_i + \ln 1 }}{ \sum\limits_{j \in \mathcal{C}} e^{V_j + \ln 1} }
+%     = \frac{e^{V_i}}{ \sum\limits_{j \in \mathcal{C}} e^{V_j} }
+%     ,\ \ \ \ \ G = \sum\limits_{j \in \mathcal{C}} e^{V_j}
+%   \end{equation}
+% Assuming this structure on $G$ very clearly implements a fixed and equal relationship between all alternatives, and as a consequence yields \textit{Independence of Irrelevant Alternatives} (IIA) across all pairs of $j\in \mathcal{C}$.
+
+\subsubsection{IIA and substitution patterns under cross nesting} \label{sec: iiaproof}
+For nested structures we should first note that whether \textit{Independence of Irrelevant Alternatives} (IIA) holds in general for a pair of alternatives $(i,k)$ is not only related to the two alternatives, as an addition to the choice set $\mathcal{C}$ might preserve the ratio of probabilities between $(i,l)$ if introduced at certain places in the tree while not at other places.
+\\ \\
+First lets handle IIA in a fixed choiceset $\mathcal{C}$, e.g. in the set shown in figure \ref{fig: tree_NL}. In any nested structure we can express the probability of ending in a given choice $c_1$ as a product of probabilities $\textrm{Pr}(i|m)$ for the steps needed to reach $c_1$ - in the NL model this sequence of steps is unique. So we have that
+\begin{equation}
+  \textrm{Pr}(\textrm{ending in }i) = \prod_{\{s\}_{j}^{i}} P(s|m_s)
+\end{equation}
+where$\{s\}_{j}^{i}$ is the unique sequence of steps leading from the root to $i$ and $m_s$ is the nest containing choice $s$ for each step in the sequence. In a two-level case this could for example be $\textrm{Pr}(public \ transport| root)\cdot \textrm{Pr}(train | public \ transport)$.
+In the nested logit the probability $\textrm{Pr}(i|m)$ is given by $\frac{e^{V_i \mu_m}} {\sum_{j \in  \mathcal{C}_m} e^{V_j \mu_m}}$ as shown in the section on estimation.
+\\ \\
+IIA is a property by which the fraction of two such products for the probability of ending in $i,k$ does not depend on anything but $V_i$ and $V_k$, that is we have IIA if each of these fractions cancel out, except for the ones containing $e^{V_i\mu_m}$ and $e^{V_k\mu_m}$ in the numerator. This is only the case if the two alternative $i,k$ are in the same nest (and in CNL if these nests are only reachable from one path). To see this write
+\begin{equation}
+  \begin{split}
+  \frac{\textrm{Pr}(\textrm{ending in }i)}{\textrm{Pr}(\textrm{ending in }k)} =
+  \frac{\prod_{\{s\}_{j}^{i}} P(s|m_s)}{\prod_{\{s\}_{j}^{k}} P(s|m_s)}
+  =
+  \frac{\prod_{\{s\}_{j}^{i} \not\in \{s\}_{j}^{k}} P(s|m_s)}{\prod_{\{s\}_{j}^{k} \not\in \{s\}_{j}^{i}} P(s|m_s)}
+  \end{split}
+\end{equation}
+Which subject to $i,k$ sharing the same childless nest $m$ collapses to
+\begin{equation}
+    \frac{\textrm{Pr}(\textrm{ending in }i)}{\textrm{Pr}(\textrm{ending in }k)} =
+    \frac{e^{V_i \mu_m}}{e^{V_k \mu_m}}
+\end{equation}
+but would otherwise contain the utilities of many other choices. If the alternatives $i,k$ are in different nests, the number of elements in the sequence $\{s\}_{j}^{i}$ might be different from the number of elements in $\{s\}_{j}^{k}$. In this case it is relevant to ask which of the denominators will cancel out, as this dictates where in the tree changes will break the IIA relation between two choices. By writing out a chain of the probabilities $e^V_i\mu_m / \sum_{j \in  \mathcal{C}_m} e^{V_j \mu_m}$ it is clear that cancelling out happens whenever the set $\mathcal{C}_m$ is shared between the two probability chains. In other words two choices, accessible through paths $\{s\}_{j}^{i}$ and $\{s\}_{j}^{k}$ will maintain IIA when changes are made to the choice-set in any nests, which are visited as a part of both $\{s\}_{j}^{i}$ and $\{s\}_{j}^{k}$.
+\\ \\
+From this we also learn that in the CNL model there is only IIA when choices are not connected to multiple nests, that is there is only IIA when there is no cross-nesting. This is because there will be multiple paths to a given node under cross-nesting, meaning
+\begin{equation}
+\textrm{Pr}^{CNL}(\textrm{ending in }i) = \sum_{\textrm{possible paths to }i} \prod_{\{s\}_{j}^{i}} P(s|m_s)
+\end{equation}
+why nothing cancels out in the relative probabilities. From this we can distil that
+\begin{itemize}
+  \item[\textbf{1.}] A pair of elemental nodes $(i,l)$ within the same nest is IIA as their ratio of probabilities will be independent from any existence or modification of other alternatives. A pair of alternatives $(i,l)$ belonging to \textit{different} nests is on the other hand not IIA in general as the ratio of probabilities can depend on the alternatives in their respective nests.
+  \item[\textbf{2.}] For any pair of alternatives $i,l$ their ratio of probabilities is independent from all nodes $n$ that are \textit{at, next to, or prior to} the lowest structural node from which both $i$ and $l$ can be reached as well as from all nodes in branches of nodes $n$ that do not reach $i$ or $l$.
+  \item[\textbf{3.}] For a pair of alternatives $i,l$ within the same nest $m$ where at least one of them is a \textit{structural node} their ratio of probabilities is independent from other alternatives within that nest, though, is not independent to any alternatives belonging to any branch following $i$ or $l$.
+\end{itemize}
+Property \textbf{1.} is a common result for the NL model \citep{train_discrete_2009}. In the CNL model cross-nesting adds the following complexities. In general property 1. and 3. holds only for alternatives $i,l$ that are \textit{not} cross-nested, i.e. $\forall n\in\mathcal{M}:\ \alpha_{n,i},\alpha_{n,l}\in0,1$. Property 3. is violated if the branches following structural nodes $i$ or $l$ contains a node that is crossed to a nest not in the branches following $i$ or $l$.
+
+Appendix \ref{app:subst} presents a variation of the proof, and concretize the application through examples.
+
+
+\subsubsection{A first generalization - the Nested Logit model (NL)}
+Before jumping to the Cross-nested Logit model (CNL) it is worth spending some time studying the simpler Nested Logit model (NL) that was introduced by H.C.W.L. \citet{williams_formation_1977}. This is the most commonly used relaxation of the \textit{Multinomial Logit} MNL model \citep{koppelman_self_2006}, and thus relaxation of the assumption of \textit{Independence of Irrelevant Alternatives} (IIA).
+
+We should separate a pair of alternatives by allocating them into different nests when we imagine the IIA-axiom can be violated, while nesting pairs together for which we assume that the IIA-axiom holds.
+
+A strategy for proposing a nesting structure is to pairwise consider whether each possible pair of alternatives in a choice set $\mathcal{C}$ share unobserved attributes. If this is the case for none of the pairs we assume IIA and should use the MNL. Otherwise if we assume a pair to compete more closely than others (e.g. $bus$ and $train$ to compete more closely than \textit{drive alone} as shown in the NL-tree for $\mathcal{C}$ in figure \ref{fig: NL} below) then the IIA-assumption is violated and we need to create a \textit{public transport} nest for these two alternatives to part them from \textit{drive alone}. Otherwise our model is misspecified as it within the same nest requires independence of errors terms.
+ %What can be a bit unclear in the literature is that the root $R$ in itself is regarded as a nest, such that two alternatives that are both kept \textit{unnested} similarly to the alternatives in the MNL model, say $c_3,c_4$, are actually each regarded as a direct child of the $R$-nest and thus the pair is assumed to be IIA. See the NL-tree in figure \ref{fig: NL} below for illustration.
+We consider nests beside the root as alternatives in themselves. \textit{Public transport} is a nest which partly has some utility in itself (e.g. the attributes that are shared by the different means of public transport) and partly depends on the expected utility of subsequently choosing either $bus$ or $train$ in order to maximize one's utility \citep{koppelman_self_2006}.
+\\ \\
+It is notable that the NL structures for the choice sets $\mathcal{C'}$ and $\mathcal{C}''$in figure \ref{fig: NL} are only one out of 13 possible two-level and 12 possible 3-level nesting structures respectively. While some are more plausible than others, we as modelers have 25 different nesting structures to choose from for four alternatives. For five and six alternatives the number of possible nesting structures goes up to no less than 235 and 2711 respectively.
+\\ \\
+\textbf{\textit{The Logsum Utility}} \\
+As mentioned the RUM class is based on the fundamental idea that individuals derive utility $U$ from each alternative in a choice set, such that an individual's utility of an alternative $U_i$ is additively composed of known values in $V_i$ and noise $\epsilon_i$. In the case of the logit model, the specification of this utility is straight forward as there is no sequentiality in choices. However, in the nested and cross-nested models, things are different. Here individuals might derive utility along their choice path, and might choose based on utility that is only available later in the choice structure. To account for this, in a way that is consistent with utility maximization, an additional term must be added to the utility of structural nests.
+
+The total utility $V_m$ of a structural nest $m$ consist partly of ordinary linear utility $W_m$, and partly of the \textit{logsum variable} or \textit{logsum utility}, $\Gamma_{m}$, which represents the expected utility of subsequently choosing between the alternatives $j$ in nest $m$ (e.g. taking into account the potential utility of $bus$ and $train$ when considering the utility of choosing the structural node \textit{public transport}) in order to maximize the given agent's utility given her observed characteristics in $x$ \citep{koppelman_self_2006}
+
+  \begin{equation} \label{eq: NL_expected_utility}
+    V_{m}=W_{m}+\frac{1}{\mu_{m}} \Gamma_m
+    %,\ \ \ \ \ \Gamma_{m} \sim{\textrm{E}}[U_i|\mathcal{C}_{n_1}]
+  \end{equation}
+Where $0<\mu_{m}<1$ is the \textit{Gumbel scale parameter} for the nest as we below use it to scale the within-nest variance. The inverse $\theta_{m}=\frac{1}{\mu_{m}}$ is known as the \textit{logsum parameter} \citep{koppelman_self_2006}. To comply with utility maximization theory, $\Gamma_m$ is defined such that the nest utility becomes
+   \begin{equation} \label{eq: NL_deterministic_nest}
+    \begin{split}
+     V_{m} &= W_{m} + \frac{1}{\mu_{m}}
+     ln\sum\limits_{j\in\mathcal{C}_{m}}e^{\mu_{m}V_j} %\\
+%     &= \beta_{m}^0 + \beta_{m}x + \frac{1}{\mu_{m}}
+%     ln\sum\limits_{i\in\mathcal{C}_{m}}e^{\mu_{m}(\beta_{i}^0 + \beta_{i}x)}
+    \end{split}
+   \end{equation}
+In the $GEV$ notation we do not explicitly distinguish between the utility of nests and end nodes, but always denote the derived utility $V_j$ for consistent notation. McFadden has shown how the NL probability function including the logsum utility can be derived by inserting equation \eqref{eq: utility_NL_nested} below into the \textit{GEV} probability function \eqref{eq: simpleprob} \citep{mcfadden_quantitative_1977, train_discrete_2009}.
+%Where the second line are for deterministic terms that are linear in parameters, like in (\ref{eq: deterministic_general}) but with alternative-invariant regressors $x$.
+%
+% As a special case, if the regressors instead were exclusively alternative-variant (i.e. extending the \textit{Conditional Logit} model with a nesting structure) the nest-specific deterministic term of choosing the nest would only depend on potential nest-specific regressors, i.e. $W_{m}=\beta_{m}^0+\beta_{m}x_{m}$, where $x_{m}$ are the variables that only vary over nests but not over the alternatives within the nest $m$ (e.g. the price in a joint ticket-system for \textit{public transport}, but not the travel time by $bus$ and $train$ respectively). Thus if no common attributes for a nest were observed we would fix $W_{m}=1$ in a solely alternative-variant NL model \citep{train_discrete_2009}. Likewise a $W_R$ component could be added to every utility equation as they are all part of the root nest, but this would only lead to overspecification if not fixed to zero.
+\\ \\
+\textbf{\textit{Utilities in the NL model}} \\
+Error terms are additively composed of higher levels of the choice tree, leading to correlation of the error terms in lower nests. For two elemental nodes $i,l$ both with the structural node $m$ as a parent the individuals' utility of choosing $i$ or $l$ would be given by \citep{train_discrete_2009}
+  \begin{equation} \label{eq: utility_NL_nested}
+  \begin{split}
+    U_{i} &= V_{i} + \varepsilon_{m} + \varepsilon_{i},\ \ \ \ \ V_{i} = W_{m} + Y_{i} \\
+    U_{l} &= V_{l} + \varepsilon_{m} + \varepsilon_{l},\ \ \ \ \ V_{l} = W_{m} + Y_{l}
+  \end{split}
+  \end{equation}
+Where the observed utility of the alternative $V_i$ consist of the underlying utilities $Y_i$ that is the utility that varies between the alternatives in the nest and $W_{m}$ that is the same nest-specific part of the deterministic utility for the nest as seen in (\ref{eq: NL_deterministic_nest}) above and resembles the utility of the shared attributes of the alternatives within the nest.
+
+As no utility is allocated to the root-nest iself, the utility function of an elemental node $k$ that is a child to the root would be equal to those of the MNL model (\ref{eq: utility_general})
+  \begin{equation} \label{eq: utility_NL_unnested}
+    U_{k} = V_{k} + \varepsilon_{k}
+  \end{equation}
+Just as for the MNL model all of the alternatives share the same variance of the (total) error term that is Gumbel-distributed with scale parameter set to 1 \citep{koppelman_self_2006}. Just as above letting $i,l$ be elemental nodes in the nest $m$ and $k$ an elemental node that is a direct child of the root
+\begin{equation} \label{eq: NL_var}
+    Var(\varepsilon_{m} + \varepsilon_{i})=
+    Var(\varepsilon_{m} +\varepsilon_{l})
+    =Var(\varepsilon_{k})
+    =\frac{\pi^2}{6}
+\end{equation}
+And the variance of the alternative-specific error terms of the alternatives within nest $m$ are scaled by the \textit{Gumbel scale parameter} $\mu_{m}$
+\begin{equation} \label{eq: NL_var_conditional}
+    Var(\varepsilon_{i})=Var(\varepsilon_{l})
+    =\frac{\pi^2}{6\mu_{m}^2}
+\end{equation}
+Such that the variance of $i$ and $l$ conditional on already being in the nest $m$ is smaller than the total variance for $i$ or $l$. As a high value of $\mu_{m}$ equals a high correlation of the error terms for which the shared component $\varepsilon_{m}$ and it variance will be big relative to the alternative specific components $(\varepsilon_{i},\varepsilon_{l})$ and the variance of these (\ref{eq: NL_var_conditional}), showing that the alternatives in the nest will have a low degree of independence of each other \citep{koppelman_self_2006}.
+
+For a nest $m$ with only two alternatives $i,l$ we have that the \textit{Gumbel scale parameter} $\mu_{m}$ can be estimated as the correlation of the total error terms of the nested alternatives \citep{cameron_microeconometrics:_2005}
+
+  \begin{equation}
+    \mu_{m}=\frac{1}{\sqrt{1-\textrm{Cor}[\varepsilon_{m}+\varepsilon_{i},\ \varepsilon_{m}+\varepsilon_{l}]}}
+  \end{equation}
+\\ \\
+%\newpage
+\noindent\textbf{\textit{Generating function for the NL}}\\
+For the NL model the generating function $G$ (\ref{eq: G-properties}) is defined as \citep{bierlaire_theoretical_2006}
+  \begin{equation}
+  \begin{split} \label{eq: NL_gev}
+    G(z)&=\sum\limits_{m\in\mathcal{M}}\left(\sum\limits_{j\in\mathcal{C}_m}z_j^{\mu_m}\right)^{\frac{\mu}{\mu_m}} \\
+    &=\sum\limits_{m\in\mathcal{M}}\left(\sum\limits_{j\in\mathcal{C}_m}e^{\mu_m V_j}\right)^{\frac{\mu}{\mu_m}}
+  \end{split}
+  \end{equation}
+Where the sum over $j\in\mathcal{C}_m$ are the available choices in nest $m$ and the sum over $m\in\mathcal{M}$ is over all the available nests in the choice set including the root itself. The parameter $\mu$ is the degree of homogeneity of $G$ and $0<\mu_m<1$ associated to a nest $m$ is the degree of correlation between error terms of the alternatives in nest $m$ as described in detail above.
+% The sum over $m\in\mathcal{M}$ is over all the available nests in the choice set including the root itself. Where the sum over $i\in\mathcal{C}_m$ are the available choices in a given nest $m$. The parameter $\mu$ is the degree of homogeneity of $G$ (1 for a linear utility function) and $0<\mu_m<1$ assosiated to a nest $m$ is the degree of correlation between error terms of the alternatives in nest $m$ as described in detail above.
+\\ \\
+% If we assume that none of the alternatives are correlated, and that the choice set $\mathcal{M}$ is of size one, the root will be the only nest in $\mathcal{M}$. The generating function $G$ (\ref{eq: NL_gev}) then collapses to
+%   \begin{equation} \label{eq: ML_gev}
+%     G(z)=\sum\limits_{j\in\mathcal{C}_m}z_i^{\mu}
+%     =%\sum\limits_{m\in\mathcal{M}}
+%     e^{\mu_mV_i}
+%   \end{equation}
+% Which is the generating function that provides the MNL model.
+% \\ \\
+Taking the \nth{1} derivative of (\ref{eq: NL_gev}) and inserting in the general probability similarly to the derivations for the CNL in (\ref{eq: Gi}-\ref{eq: CNL_conditional_probability}) below the probability probability function for the NL model \citep{train_discrete_2009} can be derived as
+  \begin{equation} \label{eq: NL_probevolutiontwo}
+  \begin{split}
+   \textrm{Pr}(\mathcal{J}=i|\mathcal{C})
+   &= \frac{\left(\sum\limits_{j\in\mathcal{C}_m}e^{\mu_mV_j}
+     \right)^{\mu/\mu_m}  }
+   {\sum\limits_{n\in\mathcal{M}}
+     \left(\sum\limits_{j\in\mathcal{C}_n}e^{\mu_nV_j}
+     \right)^{\mu/\mu_n}  }
+   \frac{e^{\mu_mV_i}}
+     {\sum\limits_{j\in\mathcal{C}_m} e^{\mu_mV_j}} \\
+   &= \textrm{Pr}(m|\mathcal{C})\textrm{Pr}(i|\mathcal{C}_m)
+  \end{split}
+  \end{equation}
+The second line shows that the probability function represents the probability of choosing a nest $m$ (which depends on the utilities for the alternatives $j$ in the nest $m$ relative to the utility of the alternatives in all of the nests $n\in\mathcal{M}$, i.e. the utility of the alternatives in the complete choice set $\mathcal{C}$) times the probability of choosing alternative $i$ given that the nest $m$ is chosen (the utility of choosing $i$ relative to the other utilities in the nest $m$). Summing the whole expression over all nests in $\mathcal{M}$ the terms will be zero for nests $m$ where the option of choosing $i$ is not available.
+
+%
+% \subsubsection{IIA in the Nested Logit}
+% Note first that in nested structures IIA is a property that is not only related to two choices $i,j$, but also to the location of these choices, as additions to $\mathcal{C}$ some places in the tree will preserve IIA between choices, while others wont.
+% \\ \\
+% First lets handle IIA in a fixed choiceset $\mathcal{C}$, e.g. one of the sets shown in \ref{fig: tree_NL}. In any nested structure we can express the probability of ending in a given choice $c_1$ as a product of probabilities $\textrm{Pr}(i|m)$ for the steps needed to reach $c_1$ - in the NL model this sequence of steps is unique. So let
+% \begin{equation}
+%   \textrm{Pr}(\textrm{ending in }i) = \prod_{\{s\}_{j}^{i}} P(s|m_s)
+% \end{equation}
+% where$\{s\}_{j}^{i}$ is the unique sequence of steps leading from the root to $i$ and $m_s$ is the nest containing choice $s$ for each step in the sequence. In a two-level case this could for example be $\textrm{Pr}(public \ transport| root)\cdot \textrm{Pr}(train | public \ transport)$.
+% In the nested logit the probability $\textrm{Pr}(i|m)$ is given by $\frac{e^{V_i \mu_m}} {\sum_{j \in  \mathcal{C}_m} e^{V_j \mu_m}}$.
+% \\ \\
+% IIA is a property by which the fraction of two such products for the probability of ending in $i,k$ does not depend on anything but $V_i$ and $V_k$, that is we have IIA if each of these fractions cancel out, except for the ones containing $e^{V_i\mu_m}$ and $e^{V_k\mu_m}$ in the numerator. This is only the case if the two alternative $i,k$ are in the same nest (and in CNL if these nests are only reachable from one path). To see this write
+%
+% \begin{equation}
+%   \begin{split}
+%   \frac{\textrm{Pr}(\textrm{ending in }i)}{\textrm{Pr}(\textrm{ending in }k)} =
+%   \frac{\prod_{\{s\}_{j}^{i}} P(s|m_s)}{\prod_{\{s\}_{j}^{k}} P(s|m_s)}
+%   =
+%   \frac{\prod_{\{s\}_{j}^{i} \not\in \{s\}_{j}^{k}} P(s|m_s)}{\prod_{\{s\}_{j}^{k} \not\in \{s\}_{j}^{i}} P(s|m_s)}
+%   \end{split}
+% \end{equation}
+% Which subject to $i,k$ sharing the same childless nest $m$ collapses to
+% \begin{equation}
+%     \frac{\textrm{Pr}(\textrm{ending in }i)}{\textrm{Pr}(\textrm{ending in }k)} =
+%     \frac{e^{V_i \mu_m}}{e^{V_k \mu_m}}
+% \end{equation}
+% but would otherwise contain the utilities of many other choices. If the alternatives $i,k$ are in different nests, the number of elements in the sequence $\{s\}_{j}^{i}$ might be different from the number of elements in $\{s\}_{j}^{k}$. In this case it is relevant to ask which of the denominators will cancel out, as this dictates where in the tree changes will break the IIA relation between two choices. By writing out a chain of the probabilities $e^V_i\mu_m / \sum_{j \in  \mathcal{C}_m} e^{V_j \mu_m}$ it is clear that cancelling out happens whenever the set $\mathcal{C}_m$ is shared between the two probability chains. In other words two choices, accessible through paths $\{s\}_{j}^{i}$ and $\{s\}_{j}^{k}$ will maintain IIA when changes are made to the choice-set in any nests, which are visited as a part of both $\{s\}_{j}^{i}$ and $\{s\}_{j}^{k}$.
+% \\ \\
+% From this we also learn that in the CNL model there is only IIA when choices are not connected to multiple nests, that is there is only IIA when there is no cross-nesting.
+
+
+\subsubsection{Commuting-examples for the NL model}
+\label{sec: NL_example}
+To exemplify our proposed properties \textbf{1.-3.} for substitution patterns in section \ref{sec: iiaproof} we elaborate on the commuting-example for the MNL model in section (\ref{sec: MNL_example}), still inspired by \citet{koppelman_self_2006}.
+\\ \\
+We first consider the MNL-tree in figure \ref{fig: NL} where $c_1$ is taking the $bus$, $c_2$ is taking the $train$, and $c_3$ is to \textit{drive alone}. As pointed out in the MNL-example it is likely that $bus$ and $train$ have some attributes in common which could either be directly observed (by sharing an alternative-variant regressor like having the same cost in a joint ticket-system) or be unobserved while being represented in the error terms that would correlate (e.g. being more environmental friendly which could correlate with having a higher educational level, or not having a start-up cost as opposed to $car$ which could correlate with alternative-invariant regressors like having low income, being young, and/or female).
+
+As a baseline for our two NL-examples we allow for correlation between $bus$ and $train$ by nesting them together in a \textit{public transport} nest, $n_1$, as shown in the NL-tree for choice set $\mathcal{C}$ in figure \ref{fig: NL}.
+\\
+  \begin{figure}[!h]
+    \begin{center}
+    \def\svgwidth{0.90\columnwidth}
+    \import{03_figures/}{NL.pdf_tex}
+    \end{center}
+    \caption[Examples of Nested Logit models for different structures and choice sets.]{Examples of Nested Logit models for different structures and choice sets. \\
+    In our analogy $c_1$ is bus, $c_2$ is train, $c_3$ is drive alone (car), $c_4$ is shared-ride, $c_5$ is light-rail, and $n_1$ is a public transport nest.} \label{fig: NL}
+  \end{figure} \\
+\textbf{\textit{As a first example}} we analyze the baseline choice set $\mathcal{C}$ and the addition of the option of choosing \textit{shared-ride}, $c_4$. We get the choice set $\mathcal{C}'$ in figure \ref{fig: NL} by making the strict assumption that \textit{shared-ride} is unnested and though does not have observed or unobserved attributes in common with any other alternative. We will later loosen this restriction by introducing cross-nesting in section \ref{sec: CNL_example}.
+
+For a given commuter that with the addition of \textit{shared-ride} would choose this new option of \textit{shared-ride} with positive probability
+then all of the other probabilities would be decreased to a higher or lesser extent due to substitution, under property \textbf{1.-2.} in section \ref{sec: iiaproof} the ratio of probabilities is unchanged for $(bus,train)$
+% \begin{equation*}
+%   \frac{ \textrm{Pr}(c_1|\mathcal{C}) }
+%     { \textrm{Pr}(c_2|\mathcal{C}) }
+%   =  \frac{ \textrm{Pr}(c_1|\mathcal{C'}) }
+%       { \textrm{Pr}(c_2|\mathcal{C'}) }
+% \end{equation*}
+but not for \textit{bus, drive alone}, \textit{bus, drive alone}, or \textit{public transport, drive alone}.
+\\ \\
+\textbf{\textit{As a second example}} we take our point of departure in the extended choice set $\mathcal{C'}=c_1,c_2,c_3,c_4,n_1$ in figure \ref{fig: NL}. Letting a \textit{light-rail}, $c_5$, enter with positive probability of being chosen we assume equal competition between \textit{light rail}, $bus$, and $train$, thus, allocates \textit{light rail} into the \textit{public transport nest}, $n_1$,
+%where the ratio of probabilities between $c_1,c_2$ is unchanged (IIA holds for the pair) as allocating alternatives into a nest at the same levels implies that we assume equal competition among all alternatives, thus the only significant correlation of the error terms is taken care of by the \textit{public transport} nest.
+giving us the new choice set $\mathcal{C''}$ in figure \ref{fig: NL}.
+
+As seen in equation (\ref{eq: NL_deterministic_nest}) above the deterministic utility of choosing the \textit{public transport} nest $n_1$ contains the \textit{logsum utility} $\Gamma_{n_1}$ which is affected by the inclusion of \textit{light-rail} within the nest. As long as there actually exists some correlation between each of the pairs for \textit{(bus, train, light-rail)} (i.e. $0<\mu_{n_1}<1$) the joint utility of choosing the \textit{public transport} nest will be positively affected by the addition of \textit{light-rail}. To sum up
+\begin{itemize}
+  \item Each of the pairs \textit{(bus, train)} and \textit{(shared-ride, drive alone)} are IIA respectively due to property \textbf{1.} in section \ref{sec: iiaproof}.
+  \item The pairs \textit{(public transport, drive alone)} and \textit{(public transport, drive alone)} are not IIA due to property \textbf{3.} in section \ref{sec: iiaproof}.
+\end{itemize}
+
+\subsection{The Cross-nested Logit model (CNL)}
+The Cross-nested Logit model (CNL) allows for actual estimation of the cross-elasticities between each pair of alternatives. Intuitively this would reduce the number of choices left for the model builder, as nesting structures can then be estimated, but in reality totally unrestricted estimation of nesting structures becomes infeasible in larger models.
+% The Cross-nested Logit model (CNL) allows for actual estimation of the cross-elasticities between each pair of alternatives. Thus one should \textit{not} think that cross-nesting leaves less to be decided by the modeler (by just start out with allowing all possible cross-nests). First of all this will require one to conduct a systematic test for whether cross-nesting for each alternative $i$ should be ruled out for each of the different nests $m$, i.e. fixing $\alpha_{im}=0$. Second of all allowing for cross-nesting only leaves you with more options. The 25 possible nesting structures for 4 alternatives of the NL model \citep{koppelman_self_2006} are still on the table for the CNL while opening up for cross-nesting allows for several more opportunities.
+\\ \\
+In the CNL model, one additional complication is added compared to the NL model, namely the possibility of each alternative $i$ being in multiple nests, such that they belong to each nest with some weight $0 \leq \alpha_{im} \leq1$ where for each alternative $\sum_{m\in\mathcal{C}}\alpha_{im}=1$. Taking a look at the $CNL_1$ tree in figure \ref{fig: CNL} in a couple of pages then $\alpha_{c_1n_1}=1\Rightarrow\alpha_{c_1n_2}=0$ meaning that alternative $c_1$ is only a part of the nest $n_1$ and not of $n_2$.
+For the alternative $c_2$ that is a part of both nests $\alpha_{c_2n_1}=\kappa\Rightarrow\alpha_{c_2n_2}=1-\kappa$ for $0<\kappa<1$.
+
+There are a number of mathematically similar, but notationally varying formulations of the model. These vary in their parametrizations with some implementing restrictions on parameters. \citet{bierlaire_theoretical_2006} chooses a formulation which he believes to be most general, and throughout this paper we will use his preferred specification. Let $z_i =e^{V_i}$ for each $i\in\{1,...,J\}$, then the cross nested logit is defined by
+
+  \begin{equation} \label{eq: G}
+    G(z_1, ..., z_J) = \sum_{m\in\mathcal{M}} \left( \sum_{i\in\mathcal{C}} \alpha_{im} z_i^{\mu_m} \right)^{\frac{\mu}{\mu_m}}
+  \end{equation}
+where $m$ is a nest-index of the set $\mathcal{M}$ of nodes in the graph, $\mathcal{C}$ is the universal choice set in the nesting structure, $\mu$ is the degree to which $G$ is homogeneous and $\mu_m$ are parameters associated with each nest $m$. By the \textit{universal} choice set we mean exactly that $\mathcal{C}$ is not in any way conditional on where in the nesting structure $m$ is. Instead setting certain $\alpha$'s equal to zero will determine the nesting structure. This is in opposition to some formulations where instead of summing over $i\in\mathcal{C}$, the summation is restricted to a set $\mathcal{C}_m \in \mathcal{C}$ of nests where $\alpha_{im}\neq 0$.
+\\ \\
+\cite{train_discrete_2009} and \cite{jong_discrete_2014} use a specification that only sum over those choices $\mathcal{C}_m$ that are nested deeper in a decision-tree-like structure. While we keep the general \textit{GEV} formulation, setting the appropriate $\alpha$'s equal to zero allows analysis exactly like the one where the decision space is restricted to go downwards in the tree.
+
+\begin{figure}[!h]
+    \begin{center}
+    \def\svgwidth{0.65\columnwidth}
+    \import{03_figures/}{tree_CNL.pdf_tex}
+    \end{center}
+    \caption[Example of cross-nesting in the actual choice structure.]{Example of cross-nesting in the actual choice structure. Compared to figure \ref{fig: tree_NL} the alternative $c$ (former $B_{ll}$) is allowed as an alternative across the nests $A_l,B_l$ with equal weight $\alpha_{A_l,c}=1-\alpha_{B_1,c}=\frac{1}{2}$ in each nest.}
+    \label{fig: tree}
+\end{figure}
+
+Figure \ref{fig: tree} contains an example of a cross nested structures in with cross-nesting such that the nest $A_{lr}/B_{ll}$ can be reached regardless of whether the initial choice is $A$ or $B$. This is not the simplest thinkable case but illustrates the amount of complexity cross-nesting adds to the problem, as all choices in the highest levels of the tree, now potentially correlate as individuals seek to reach $A_{lr}/B_{ll}$.
+
+
+
+
+\subsubsection{GEV-conditions for the CNL model} \label{sec: GEV-conditions}
+The generating function of the CNL needs to satisfy the three criteria for the definition of the generating function $G$ (\ref{eq: G-properties}), thus, a number of a priori restrictions have to be made on the parameters \citep{bierlaire_theoretical_2006}. Specifically
+\begin{itemize}
+  \item $G$ is non-negative if all $\alpha_{im} > 0$. This should be clear by looking at $G(\cdot)$
+  \item $G$ is homogeneous of degree $\mu>0$ as long as $\mu>0$. This is directly visible from $G(tz_1, tz_2, ... tz_J) = \sum_m \left(\sum_j \alpha_{jm}z_j^{\mu_m} t^{\mu_m} \right)^{\frac{\mu}{\mu_m}} = t^{\mu} G(z_1, z_2, ..., z_J)$
+  \item $\lim_{z_j \rightarrow \infty} G( \cdot)= \infty \ \forall j$ requires that $\sum_m \alpha_{jm} > 0  \ \forall j$, that is all choices have at least some connection to the other nests. If this is not true, we could have only $0$-valued $\alpha$'s associated with a nest, causing $\lim_{z_j \rightarrow \infty} G( \cdot) = 0$ for that specific $j$.
+  \item additionally we need $\mu_m> 0 \ \forall m$ and $\mu \leq \mu_m \ \forall m$ both of which are required to satisfy requirement 3. \citet{bierlaire_theoretical_2006} show a proof for the general $k$'th derivative of $G$ and find that
+  \begin{equation}
+    \frac{\partial^k G(z)}{\partial z_{i_1}, ..., \partial z_{i_k}} = \sum_m \left(
+     \mu_m^k \prod_{n\in\{i_1, ..., i_k\}} (\alpha_{nm}z_n^{\mu_m -1}) \prod_{n=0}^{k-1}\left( \frac{ \mu}{\mu_m} - n \right) y_m^{\frac{\mu - k \mu_m}{\mu_m}}
+    \right)
+  \end{equation}
+  where $i_1, ..., i_k$ are $k$ arbitrarily selected indices in $\mathcal{J}$. For this to be nonnegative when the order of the derivative is odd, and non-positive when the order of derivative is even, there is then only three cases to consider, namely $k=1$ in which case $G'>0$ (this is visible in equation \eqref{eq: Gi}). Otherwise if $k>1$ we might have $\mu=\mu_m$ in which case the derivative is always $0$, as $\prod_{n=0}^{k-1} (1 - n)$ gives a $0$ when $n=1$.
+  \\ \\
+  We might also have $k>1$ and $\mu< \mu_m$ the sign of the entire derivative is given directly from the $\prod_{n=0}^{k-1} (\frac{\mu}{\mu_m} - n)$ term. Clearly in this case $\mu / \mu_m$ lies between $0$ and 1, and thus only the first term where $n=0$ in the product will be positive. Thus there is 1 positive term in the product and $k-1$ negative terms, implying
+  \begin{equation}
+    \frac{\partial^k G(z)}{\partial z_{i_1}, ..., \partial z_{i_k}} \begin{cases}
+    &\geq 0, \ \textrm{if }k \textrm{ is odd} \\
+    &\leq 0, \ \textrm{if }k \textrm{ is even}
+  \end{cases}
+  \end{equation}
+  This argument also makes it clear that while $\mu>\mu_m$ might produce a valid GEV generating function, whether $G$ is a GEV generator depends crucially on the relative size of the parameters.
+\end{itemize}
+
+
+% \subsubsection{The CNL model as a route choice model}
+% \citet{papola_developments_2004} suggests a use for the CNL model that has applications in a wide range of problems beyond tree-like decision processes. Specifically he suggests a way to convert route-choice problems into CNL models.
+%
+% \begin{figure}[!h]
+%   \begin{center}
+%   \def\svgwidth{0.9\columnwidth}
+%   \import{03_figures/}{roadmap.pdf_tex}
+%   \end{center}
+%   \caption{CNL for route choice modelling}
+%   \label{fig: roadmap}
+% \end{figure}
+% Consider the two networks shown in figure \ref{fig: roadmap} and let the network (1) represent a road network connecting the origin O with the destination D. Furthermore let each of the arrows represent a road with nodes 2,3,4 being intersections. There are then four paths through the road-network, i.e. one could choose the highlighted path $O \rightarrow 2 \rightarrow D$. This network can then easily be reshaped into a cross nested structure by considering the four full paths from $O$ to $D$ instead of the individual road segments.
+%
+% This reformulation in terms of full paths is shown in (2) with choices $A,B,C,D$ being a route from $O$ to $D$. The underlying assumption is simply that choices only correlate if they share some part of their route. For example $A$ and $B$ share the road-segment $O\rightarrow 2$ and are therefore assumed to correlate. In this paper we do not particularly work with this type of network CNL's, but note that this interpretation is essentially valid for any CNL model, significantly broadening the interpretability and depth of the models.
+
+% \subsection{The Logsum Utility}
+% As mentioned the RUM class is based on the fundamental idea that individuals derive utility $U$ from each alternative in a choice set, such that the utility is additively composted of known values $V$ and noise $\epsilon$. In the case of the logit model, the specification of this utility is straight forward as there is no sequentiality in choices. In the nested and cross-nested models, things are different however. Here individuals might derive utility from their choices along their path, and might choose based on utility that is only available later in the choice structure. To account for this, in a way that is consistent with utility maximization, an additional term must be added to the utility at structural nodes. It can be shown that a consistent representation of the within-nest utilities of choices is
+% \begin{equation}
+%   \log \sum_j \exp{x\beta_j \cdot \mu_m}
+% \end{equation}
+% and the direct utility of a structural node can be parameterized simply as $W_m = x\beta_m$. Thus the total utility from choosing a structural node is
+% \begin{equation}
+%   V_m = x\beta_m +  \log \sum_j \exp{x\beta_j \cdot \mu_m}
+% \end{equation}
+% In the following we don't explicitly distinct between strucutral and non-structural nodes, but always denote the derived utility $V$.
+
+
+\subsubsection{Commuting-example for the CNL model}
+\label{sec: CNL_example}
+Returning to the analogy of commuter's choice between \textit{bus, train, shared-ride,} and \textit{drive alone} $(c_1,c_2,c_3,c_4)$ we go from the $NL$ tree for choice set $\mathcal{C'}$ in figure \ref{fig: NL} to the $CNL_1$ tree in figure \ref{fig: CNL} by allowing \textit{shared ride}, $c_4$, to be cross-nested.
+
+The nest $n_1$ is the \textit{public transport} nest or more generally a \textit{group travel} nest as we imagine \textit{shared-ride} to have some similarities with $bus$ and $train$ by also being some kind of group travel. On the other hand it also differs by the fact that the means of transport is a private auto wherefore we also assumes that \textit{shared-ride} correlates with \textit{drive alone} and we nest them together in a \textit{private auto} nest, $n_2$. As $c_4$ is available across both nests we cannot assume IIA between any pair of alternatives in the tree as a change in any nest would affect this.
+\\
+  \begin{figure}[!h]
+    \begin{center}
+    \def\svgwidth{0.90\columnwidth}
+    \import{03_figures/}{CNL.pdf_tex}
+    \end{center}
+    \caption[Examples Nested- and Cross-nested Logit models showing three different choice structures for the same choice set.]{Examples Nested- and Cross-nested Logit models showing three different choice structures for the same choice set. \\
+    Through our analogy $c_1$ is bus, $c_2$ is train, $c_3$ is drive alone (car), $c_4$ is shared-ride, $n_1$ is a public transport or \textit{group travel} nest, and $n_2$ is a \textit{private auto} nest.} \label{fig: CNL}
+  \end{figure} \\
+A common starting point for estimation is to define the tree structure by letting $c_4$ take equal part in both nests $\alpha_{c_4n_1}=\alpha_{c_4n_2}=\frac{1}{2}$ and also for the $CNL_1$ case restrict the other alternatives to not be cross-nested $\alpha_{c_1n_1}=\alpha_{c_2n_1}=\alpha_{c_3n_2}=1$. By identifying the system and applying appropriate estimation methods (see section \ref{sec: Estimation} and \ref{sec: Code}) the idea is to actually estimate the degree to which \textit{shared-ride} belongs to each nest. If $\alpha_{c_4n_1}=1-\alpha_{c_4n_2}$ is found to be sufficiently close to $0$ or 1 we have shown \textit{shared-ride} is indeed not cross-nested and our model collapses to a NL-structure where $c_4$ only belongs to the nest $m$ for which we estimate $\alpha_{c_4m}\rightarrow1$.
+\\ \\
+Other 2-level nesting structures could be assumed such as a \textit{road} nest for \textit{(bus, shared-ride, drive alone)} or a \textit{long-distance} nest for \textit{(train, shared-ride, drive alone)}. The $CNL_2$ tree in figure \ref{fig: NL} allows each possible pair of the choices $c_1,c_2,c_3,c_4$ to be correlated as a starting point, thus, in theory lets us estimate any 2-level nesting structure with two nests. Unfortunately, as one could imagine, the objective function that we would then seek to minimize is high-dimensional as there is an $\alpha$-parameter for each cross-nest and far from convex, so that we are not guaranteed to have convergence nor be sure that our result is the global maximum.
+
+% For model comparison one could also estimate 2-level nesting structures with one or three nests as well as 3-level nesting structures. E.g. instead of renaming the \textit{public transport} nest keeping it with \textit{(bus, train)} but creating a \textit{group transport} nest with \textit{(public transport, shared-ride)} such that the alternatives \textit{bus} and \textit{train} are not available until the \nth{3} level of the nesting structure.

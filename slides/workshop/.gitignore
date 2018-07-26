@@ -1,0 +1,9 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.nav
+*.synctex.gz
+*.xml
+*.snm
+*.bib
+*.out

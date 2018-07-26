@@ -1,0 +1,120 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage[style=authoryear, backend=bibtex8, natbib=true, maxcitenames=2]{biblatex}
+
+\usepackage{graphicx}
+\usepackage{import}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\title{The cross-nested logit model}
+\subtitle{Estimating partially nested structures}
+% \date{\today}
+\date{\today}
+\author{Thor Donsby Noe \& Kristian Urup Larsen}
+\institute{Department of Economics, University of Copenhagen}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+
+
+    % \definecolor{BlueTOL}{HTML}{222255}
+    \definecolor{BrownTOL}{HTML}{666633}
+    \definecolor{GreenTOL}{HTML}{225522}
+    % \setbeamercolor{normal text}{fg=BlueTOL,bg=white}
+    \setbeamercolor{alerted text}{fg=BrownTOL}
+    \setbeamercolor{example text}{fg=GreenTOL}
+
+    \setbeamercolor{block title alerted}{use=alerted text,
+        fg=alerted text.fg,
+        bg=}
+    \setbeamercolor{block body alerted}{use={block title alerted, alerted text},
+        fg=alerted text.fg,
+        bg=}
+    \setbeamercolor{block title example}{use=example text,
+        fg=example text.fg,
+        bg=}
+    \setbeamercolor{block body example}{use={block title example, example text},
+        fg=example text.fg,
+        bg=}
+
+    \setbeamercolor{block title alerted}{use=alerted text,
+        fg=alerted text.fg,
+        bg=alerted text.bg!80!alerted text.fg}
+    \setbeamercolor{block body alerted}{use={block title alerted, alerted text},
+        fg=alerted text.fg,
+        bg=block title alerted.bg!50!alerted text.bg}
+    \setbeamercolor{block title example}{use=example text,
+        fg=example text.fg,
+        bg=example text.bg!80!example text.fg}
+    \setbeamercolor{block body example}{use={block title example, example text},
+        fg=example text.fg,
+        bg=block title example.bg!50!example text.bg}
+
+
+\begin{document}
+\setbeamercolor{background canvas}{bg=white}
+\maketitle
+
+
+% ------------------------------------------------------------------------------
+% ------ FRAME -----------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\begin{frame}{Research question}
+  \begin{itemize}
+    \item Show how the cross-nested logit model can extend the concepts of nested choices to a range of complex choice puzzles.
+    \item Implement an estimator for the cross-nested logit on synthetic and real data (for the Danish unemployment benefits systems).
+  \end{itemize}
+
+  \begin{figure}[!h]
+  %  \def\svgwidth{0.50\columnwidth}
+  %  \input{tree.pdf_tex}
+    \resizebox{3in}{!}{\input{tree_noinfo.pdf_tex}}
+  %  \caption{Timeline illustration of event setup}
+  \end{figure}
+
+  \textbf{Motivation:}
+  \begin{itemize}
+    \item To loosen the restriction that each option is only accessible through one tree-path, but not duplicated.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{The cross-nested logit model}
+  The CNL models are simply a generalization of the Multinomial Logit model, within the GEV (Generalized Extreme Value) class where
+  \begin{equation}
+    \small
+  G(x_1, ..., x_J) = \sum_{m} \left( \sum_{j\in\mathcal{J}} \alpha_{jm} x_j^{\mu_m} \right)^{\frac{\mu}{\mu_m}}
+  \end{equation}
+
+  Where $m$ is a nest index, $\alpha_{jm}$ gives how much choice $j$ is in nest $m$ and is restricted to $\sum_m \alpha_{jm}> 0 \ \forall j$. It is somewhat common to require $\sum_m \alpha_{jm} = 1$.
+
+  \begin{figure}[!h]
+  %  \def\svgwidth{0.50\columnwidth}
+  %  \input{tree.pdf_tex}
+    \resizebox{3in}{!}{\input{tree.pdf_tex}}
+  %  \caption{Timeline illustration of event setup}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}{So what's next?}
+  \begin{itemize}
+    \item Simulate the DGP described by the CNL - we want a visual understanding of the data. Also successfully code the estimator.
+    \item It's typically assumed that $\alpha$'s are a priori known (?) to keep the number of parameters down $\rightarrow$ can parameter tuning give optimal $\alpha$'s?
+    \item The estimation requires either heavy computer power or analytically derived derivatives from complex functions (although they do exits!) $\rightarrow$ how sensitive is numerical optimization in this setting?
+    \item Use CNL to estimate choice probabilities for those on sick leave within the \textit{unemployment benefits system} using Danish registry data from the DREAM group.
+  \end{itemize}
+\end{frame}
+
+\end{document}

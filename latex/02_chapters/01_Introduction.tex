@@ -1,0 +1,18 @@
+In this paper we study the Generalized Extreme Value (GEV) model with cross-nesting, simply known as the Cross-nested Logit (CNL) model, as a useful solution to the fact that the Multinomial Logit (MNL) model produces simplified and biased results for the many cases where it is unrealistic to assume Independence of Irrelevant Alternatives (IIA). The GEV framework is a flexible framework encompassing a broad range of discrete choice models which are all consistent with the theory of Random Utility Models (RUM's) and have closed form likelihood functions. So far GEV models, including the CNL model have received little attention by economists, perhaps partly because work to understand the models in themselves is still ongoing. In addition to the lack of a full understanding of the workings of GEV models, it requires a significant investment of time to become proficient in the use of either the available software tools able to estimate CNL/GEV models. Despite these drawbacks GEV models seem useful in cases where it is known that some structural effects are important in decision processes, but the exact form of these structural traits is unknown. %An example is in the study of route choice - here roads, train lines etc. are naturally limiting the choice possibilities, but exactly how they affect decision makers is preferable left for the estimation to decide.
+\\ \\
+To understand substitution patterns and other dynamics behind RUM choice modelling we first provide a rundown of the theory from the simple MNL model to the GEV framework. We then proceed to describe our somewhat successful implementation of the CNL model and discuss challenges in this regard.
+\\ \\
+Finally we use prebuild software to estimate a range of GEV models on unemployment data from the Danish DREAM database. Here we find evidence of nesting, such that individuals nest together options that involve unemployment benefits in one nest, and ordinary employment in another nest. The driving force behind this nesting is still to be determined.
+
+% The CNL model is in short a structural model of sequential or nested choices allowing choice nodes partial membership of multiple nests. This allows the model large flexibility, but implies a large number of parameters restricted by both linear and nonlinear constraints. We shortly review the most useful literature and software.
+
+% Our theory section outlines the Multinomial Logit (MNL), Nested Logit (NL) and Cross-nested Logit. To fully understand the entwined dynamics of choice structures we contribute with a general set of rules for the implications of all possible changes to nesting structures.
+
+% Estimating CNL models require imposing parameter restrictions, often ad-hoc as knowledge of proper identification is lacking. We generalize an identification method from the NL to the CNL.
+
+% Our estimator is able to somewhat produce parameters close to our simulatetd GEV data but it does not converge.
+
+% Lastly we estimate MNL, NL and CNL choice models for the subsequent "choice" between employment and receiving social services for individuals on sick leave in November 2016, based on registries from the Danish DREAM database. We find evidence of nesting, such that individuals nest together options that involve unemployment benefits in one nest, and employment in another nest.
+
+% We find that the GEV models allow extreme heterogeneity in choice probabilities and have complicated marginal effects which makes direct comparison with simpler models difficult.
+% \\ \\

@@ -1,0 +1,20 @@
+%%% File encoding is ISO-8859-1 (also known as Latin-1)
+%%% You can use special characters just like �,� and �
+
+\FloatBarrier
+\section{Identification w.r.t "utility shifting"}
+\label{app:utilityshifting}
+In the nested logit the equations in \eqref{eq:utilityshifting} are independent and can therefore be solved one by one. We can show that there is a utility shifting potential, where utility is subtracted in the nest, and added in the nest-children in the ACS'es $\psi$ by
+\begin{equation}
+  \begin{split}
+    V_m^{\psi} &= W_m - \psi + \frac{1}{\mu_m} \ln \sum_{j\in \mathcal{C}_m} e^{\mu_m V_j + \psi} \\
+    & = W_m - \psi + \frac{1}{\mu_m} \ln \sum_{j\in \mathcal{C}_m} e^{\mu_m (V_j + \psi)} \\
+    &=  W_m - \psi + \frac{1}{\mu_m} \ln e^{\mu_m \psi} \sum_{j\in \mathcal{C}_m} e^{\mu_m V_j} \\
+    &= W_m - \psi + \psi + \frac{1}{\mu_m} \ln \sum_{j\in \mathcal{C}_m} e^{\mu_m V_j} \\
+    &= V_m
+  \end{split}
+\end{equation}
+
+In a similar fashion we can show that this problem also exists when considering scaling the $\beta$'s in $V_i$. This is omitted for brevity but follows the exact same lines as the above.
+\\ \\
+In order to solve this issue in the NL model, all nests should therefore have their ACS restricted to a fixed value, such as $0$.

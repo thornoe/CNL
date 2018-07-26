@@ -1,0 +1,107 @@
+%%% File encoding is ISO-8859-1 (also known as Latin-1)
+%%% You can use special characters just like �,� and �
+
+\FloatBarrier
+\section{Substitution patterns in nesting structures}
+\label{app:subst}
+A virtue of finding a nesting structure that resembles reality well is, that it can be used for policy advice as the choice structure implies to which alternatives the probabilities would shift for each possible alteration of the availability or attributes of each alternative in the choice set. In this section we propose three general properties for the ratio of probabilities in all possible nesting and cross-nesting structures.
+% \\ \\
+% A virtue of finding a nesting structure that resembles reality well is, that it can be used for policy advice as the choice structure implies to which alternatives the probabilities would shift for each possible alteration of the availability or attributes of each alternative in the choice set. In this section we therefore not only extend the general rule of where \textit{Independence of Irrelevant Alternatives} (IIA) holds in the Nested Logit (NL) model to the Cross-nested Logit (CNL) but also proposes some general rules for the ratio of probability alternatives that are not IIA in general.
+\\ \\
+Here we show how the ratio of probabilities can be used to examine the substitution patterns for a pair of alternatives in a specific choice structure. Furthermore we thoroughly use this methods to prove the properties \textbf{a.-e.} that are condensed into property \textbf{$1.-3.$} for Nested Logit and Cross-nested Logit models in section \ref{sec: iiaproof}.
+\\ \\
+Inspired by \citet{bierlaire_overspecification_1997} and by using examples from the right side of figure \ref{fig: tree_NL} we use the following terminology for the different nodes (alternatives) in the choice structure. The \textit{parent node of} $B_l$ \textit{and} $B_r$ is the nest $B$ directly above the alternatives, while reversely the \textit{children of} $B$ are the alternatives $B_l,B_r$ immediately belonging in the nest $B$.
+The complete choice structure consists of the root $R$,
+the \textit{structural nodes} which is the set of the alternatives that are nests in themselves ($B,B_l$), and the \textit{elemental nodes} which is the set of alternatives without children themselves ($B_r,B_{ll},B_{lr}$). The \textit{branch} following a structural node $B$ would contain all the elemental and structural nodes that could be reached further down the tree after choosing $B$ (i.e. $B_l,B_r,B_{ll},B_{lr}$).
+\\
+\begin{figure}[!h]
+    \begin{center}
+    \def\svgwidth{0.65\columnwidth}
+    \import{03_figures/}{tree_NL.pdf_tex}
+    \end{center}
+    \caption{Example of nesting in the actual choice structure.}
+    \label{fig: tree_NL}
+\end{figure}
+\\
+As shown by Kenneth \citet{train_discrete_2009} it holds for the Nested Logit (NL) model that
+\begin{itemize}
+  \item[\textbf{1.}] A pair of elemental nodes $(i,l)$ within the same nest is IIA as their ratio of probabilities will be independent from any existence or modification of other alternatives.
+  \item[\textbf{2.}] A pair of alternatives $(i,l)$ belonging to \textit{different} nests is not IIA in general as the ratio of probabilities can depend on the alternatives in their respective nests.
+\end{itemize}
+To find out for which cases the relative probability for any pair of alternatives (e.g. $A_{lc},A_{lr}$ in figure \ref{fig: tree_NL}) is independent to different changes in the choice set, the simplest approach is to write up and analyze the ratio of probabilities for the pair by using the following slight rewriting of the probability function \eqref{eq: NL_probevolutiontwo} for the NL in GEV-form. That is, it has the feature that one will never need to look at alternatives above the given nest $A_{l}$ (or substitute in the whole path of conditional probabilities up till the root) as the probability of choosing $A_{lc}$ in a given nest $A_l$ over all other alternatives in the choice set $\mathcal{C}$ only depends on the attributes $V_{A_lc}$ and $V_j$ for the alternatives $j\mathcal{C_m}=A_{ll},A_{lc},A_{lr}$
+that all belong to the same nest $A_ll$ and not on alternatives \citep{train_discrete_2009}. This works as utility maximizing under perfect information ensures that the utility of any possible alternative in the choice set is taken into account by the rational agent already at the root \citep{mcfadden_modelling_1977}.
+\begin{equation} \label{eq: NL_probevolutionthree}
+ \textrm{Pr}(\mathcal{J}=i|\mathcal{C})
+ \frac{e^{\mu_mV_i}
+   \left(\sum\limits_{j\in\mathcal{C}_m}e^{\mu_mV_j}
+   \right)^{\frac{\mu}{\mu_m}-1}  }
+ {\sum\limits_{n\in\mathcal{M}}
+   \left(\sum\limits_{j\in\mathcal{C}_n}e^{\mu_nV_j}
+   \right)^{\frac{\mu}{\mu_m}}  }
+\end{equation}
+As the probability function \eqref{eq: NL_probevolutionthree} for any two alternatives $i,l\in\mathcal{C}$ will have the same denominator then we only need the numerators for analyzing the ratio of probability for the pair. Letting $i$ be a child of $m_i$ and $l$ of the nest $m_l$ we have
+\begin{equation} \label{eq: NL_ratio}
+  \frac{\textrm{Pr}(\mathcal{J}=i|\mathcal{C})}
+    {\textrm{Pr}(\mathcal{J}=l|\mathcal{C})}
+  =\frac{e^{\mu_{m_i} V_i}
+    \left(\sum\limits_{j\in\mathcal{C}_{m_i} }e^{\mu_{m_i} V_j}\right)
+    ^{\frac{\mu}{\mu_{m_i} }-1}  }
+  {e^{\mu_{m_l} V_l}
+    \left(\sum\limits_{j\in\mathcal{C}_{m_l} }e^{\mu_{m_l} V_j}  \right)
+    ^{\frac{\mu}{\mu_{m_l} }-1}  }
+\end{equation}
+If $i$ and $l$ are elemental nodes of the same parent nest (e.g. $A_{lc},A_{lr}$ in figure \ref{fig: tree_NL}) then $m_i=m_l$ and
+\begin{equation} \label{eq: NL_ratio_IIA}
+  \frac{\textrm{Pr}(\mathcal{J}=i|\mathcal{C})}
+    {\textrm{Pr}(\mathcal{J}=l|\mathcal{C})}
+  =\frac{e^{\mu_{m_{i}} V_i}  }
+    {e^{\mu_{m_{l}} V_l}  }
+  =\frac{e^{V_i}  }
+      {e^{V_l}  }
+\end{equation}
+Which is the result shown by \citet{train_discrete_2009}. We have written up his \nth{1} property in a slightly elaborated version to underline that it holds for \textit{elemental nodes} within the same nest while he seems to not regard nests as alternatives in themselves.
+
+To disprove that IIA should holds in general for all pairs of alternatives within a nest including structural nodes, we again let $i,l$ be children of the same nest but for $i$ being a structural node and $l$ an elemental node (e.g. $A_{ll},A_{lr}$ in figure \ref{fig: tree_NL}). While our result at first sight is identical to \eqref{eq: NL_ratio_IIA} we have to keep in mind that from \eqref{eq: NL_expected_utility} we have that a structural node $l$ has the utility $V_l=W_m+\frac{1}{\mu_m}\Gamma_{m}$
+where we from \eqref{eq: NL_deterministic_nest} have the logsum utility  for all alternatives in the nest below. If any of these are structural nodes the logsum utilities for all lower subnests should likewise be iteratively substituted into the joint utility of a structural node $l$. That we do not have IIA in general is to be expected from property $2$. Though, it is clear from \eqref{eq: NL_ratio} and \eqref{eq: NL_ratio_IIA} respectively that a \nth{3} and \nth{4} property can be added:
+\begin{itemize}
+  \item[\textbf{3.}] For any pair of alternatives $i,l$ their ratio of probabilities is independent from all nodes $n$ that are \textit{at, next to, or prior to} the lowest structural node from which both $i$ and $l$ can be reached as well as from all nodes in branches of nodes $n$ that do not reach $i$ or $l$.
+  \item[\textbf{4.}] For a pair of alternatives $i,l$ within the same nest $m$ where at least one of them is a \textit{structural node} their ratio of probabilities is independent from other alternatives within that nest, though, is not independent to any alternatives belonging to any branch following $i$ or $l$.
+\end{itemize}
+E.g. in figure \ref{fig: tree_NL} the ratio of probabilities for $(A_{ll},A_{lr})$ is independent of all other elemental and structural nodes but for changes in $A_{lll}$ or $A_{llr}$.
+\\ \\
+Next we analyze if under any circumstances the ratio of probabilities of $i,l$ could be independent for $i$ in nest $m_i$ that is different from the nest $m_l$ containing $l$. Applying these conditions to \eqref{eq: NL_ratio} we see that no terms go out. Even the share of an elemental node $i$ within a structural node $m_i=l$ is only independent of alternatives at higher levels in the nesting structures, i.e. for $i$ belonging to the nest $m_i$ and $m_i=l$ belonging to the nest $m_l$. We see that property 2 actually holds such that $i,l$ is not independent from any choices but the ones mentioned in property 3. For poperty 2 we are thus remminded that depending on alternatives in their respective nests also implies dependence on every alternative in a branch that starts in their nests.
+\\ \\
+\textbf{\textit{Substitution patterns under cross-nesting}}\\
+From equation \eqref{eq: likelihoodderiv} below we get that the equivalent to \eqref{eq: NL_ratio} for the \textit{Cross-nested Logit} model where nodes are allowed to be cross-nested
+\begin{equation} \label{eq: CNL_ratio}
+  \frac{\textrm{Pr}(\mathcal{J}=i|\mathcal{C})}
+    {\textrm{Pr}(\mathcal{J}=l|\mathcal{C})}
+  =\frac{\sum_m\alpha_{im_i}e^{\mu_{m_i} V_i}
+    \left(\sum\limits_{j\in\mathcal{C}_{m_i} }\alpha_{jm_j}e^{\mu_{m_i} V_j}\right)
+    ^{\frac{\mu}{\mu_{m_i} }-1}  }
+  {\sum_m\alpha_{lm_l}e^{\mu_{m_l} V_l}
+    \left(\sum\limits_{j\in\mathcal{C}_{m_l} }\alpha_{jm_j}e^{\mu_{m_l} V_j}  \right)
+    ^{\frac{\mu}{\mu_{m_l} }-1}  }
+\end{equation}
+We find that we can add a \nth{5} property such that for nesting structures where some nodes are allowed to be a part of several nests
+\begin{itemize}
+  \item[\textbf{5.}] In general property 1. and 4. holds only for alternatives $i,l$ that are \textit{not} cross-nested, i.e. $\forall n\in\mathcal{M}:\ \alpha_{n,i},\alpha_{n,l}\in0,1$. Property 3. is violated if the branches following structural nodes $i$ or $l$ contains a node that is crossed to a nest not in the branches following $i$ or $l$-
+\end{itemize}
+Where in figure \ref{fig: tree} the pair $(A_{lc},A_{lr})$ nested in $A_l$ with $\alpha_{A_l,A_{lc}}=\alpha_{A_l,A_{lr}}=1$ is still IIA despite (partly) sharing nest with the cross-nested node $c$ as \eqref{eq: CNL_ratio} collapses to
+\begin{equation} \label{eq: CNL_ratio}
+  \frac{\textrm{Pr}(\mathcal{J}=A_{lc}|\mathcal{C})}
+    {\textrm{Pr}(\mathcal{J}=A_{lr}|\mathcal{C})}
+    =\frac{\alpha_{A_l,A_{lc}}e^{\mu_{m_{A_{l}}} V_{A_{lc}}}  }
+      {\alpha_{A_l,A_{lr}}e^{\mu_{m_{A_{l}}} V_{A_{lr}}}  }
+    =\frac{e^{V_{A_{lc}}}  }
+        {e^{V_{A_{lr}}}  }
+\end{equation}
+The proof of property 4. is parallel to that of property 1. above, both conditioned on 5. It is trivial that property 2. and 3. conditional on property 5. holds for the CNL as for a cross-nested node like $c$ its probability will be a sum with a term for every $\alpha>0$ which in general hinders further reduction in the ratio of probabilities wrt. other alternatives.
+
+We are able to come up with just one very specific special case where a pair of alternatives with at least one of them being cross-nested would be IIA. Both would need to be cross-nested to the exact same nests and with equivalent $\alpha$-values. E.g. if $A_{lr}$ like $c$ was cross-nested to the nest $B_l$ with $\alpha_{B_l,A_{lr}}$ then \eqref{eq: CNL_ratio} would collapse to
+\begin{equation} \label{eq: CNL_ratio}
+  \frac{\textrm{Pr}(\mathcal{J}=c|\mathcal{C})}
+    {\textrm{Pr}(\mathcal{J}=A_{lr}|\mathcal{C})}
+    =\frac{e^{V_{c}}  }
+        {e^{V_{A_{lr}}}  }
+\end{equation}

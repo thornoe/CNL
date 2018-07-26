@@ -1,0 +1,158 @@
+%%% File encoding is ISO-8859-1 (also known as Latin-1)
+%%% You can use special characters just like �,� and �
+
+\FloatBarrier
+% \section{Examples of substitution patterns}
+% \label{sec: examples}
+% In the following we clarify the thorough implications of the \textit{Independence of Irrelevant Alternatives} (IIA) by analyzing how different choice structures lead to fundamentally different predictions for the reaction to new choices being added in terms of potential changes in the ratio of probabilities between the existing alternatives.
+
+\section{Commuting-example for the MNL model}
+\label{sec: MNL_example}
+Inspired by \citet{koppelman_self_2006} the starting point is the commuters choice between $car$ and $bus$ as the two possible means of transport in a choice set $\mathcal{C}^0$ for everyday commuting to work. Say that the commuter given her characteristics would choose to drive alone in a car with probability $\frac{2}{3}$ and to take the bus with probability $\frac{1}{3}$, thus, the ratio of probabilities is
+  \begin{equation} \label{eq: bus_car}
+    \frac{\textrm{Pr}(\mathcal{J}=\textrm{car}|\mathcal{C}^0)}
+    {\textrm{Pr}(\mathcal{J}=\textrm{bus}|\mathcal{C}^0)}=
+    \frac{2/3}{1/3}=2
+  \end{equation}
+Now let us say a railway is being build and a local $train$ line is introduced with several stations not far from the bus line used by the commuter. Furthermore the same ticket system applies for both of the public transport alternatives.
+
+
+  \begin{figure}[!h]
+    \begin{center}
+    \def\svgwidth{0.70\columnwidth}
+    \import{03_figures/}{MNL.pdf_tex}
+    \caption{Examples of Multinomial Logit models for two choice sets. \\
+    For our analogy $c_1$ is bus, $c_2$ is train, and $c_3$ is car.}
+    \label{fig: MNL}
+    \end{center}
+  \end{figure}
+
+
+Looking at this new choice set $\mathcal{C}$ in figure \ref{fig: MNL} let us first assume for simplicity that the commuter with a RUM-type utility function (\ref{eq: utility_general}) would choose $train$ and $bus$ with equal probability as the two alternatives share somewhat similar characteristics (note though, that the probability of taking the train could be set to any number $\in]0,1[$ for this example to carry through).
+  \begin{equation} \label{eq: train_bus}
+    \textrm{Pr}(\mathcal{J}=\textrm{train}|\mathcal{C})
+    =\textrm{Pr}(\mathcal{J}=\textrm{bus}|\mathcal{C})
+  \end{equation}
+In line with the IIA assumption the ratio of probabilities for
+(\ref{eq: bus_car}) is kept constant, such that $\frac{2}{3}$ of the new train passengers took the car before and $\frac{1}{3}$ of the train passengers took the bus before as this was the distributions before the introduction of the train and IIA assumes equal competition. Take into account the probability of taking the $train$ (\ref{eq: train_bus}) and that the probabilities of the choices have to sum to one. The solution under these three conditions is that the probabilities of the extended choice set $\mathcal{C}$ should be
+  \begin{equation} \label{eq: bus_car_train}
+    \textrm{Pr}(\mathcal{J}=\textrm{car}|\mathcal{C})=\frac{1}{2},\ \ \
+    \textrm{Pr}(\mathcal{J}=\textrm{bus}|\mathcal{C})=\frac{1}{4},\ \ \
+    \textrm{Pr}(\mathcal{J}=\textrm{train}|\mathcal{C})=\frac{1}{4}
+  \end{equation}
+Thus, the MNL model predicts that the effect of adding another public transport option is that the probability of taking the $car$ drops from $\frac{2}{3}$ to $\frac{1}{2}$ while the joint probability of taking \textit{public transport} goes up from $\frac{1}{3}$ to $\frac{1}{2}$.
+
+Implying that twice as many $train$ passengers took the $car$ before as opposed to the $bus$ makes it obvious that IIA is a wrong assumption in this case. That is, the MNL model overestimates the joint probability of taking \textit{public transport} due so keeping the prior ratio of probabilities between taking the car and taking the bus (\ref{eq: bus_car}) constant despite the introduction of a train-alternative.
+
+Deviating from the IIA-axiom, a more realistic assumption (though extreme too) could be that $bus$ and $train$ are such similar alternatives that the introduction of a train line does not affect the probability of taking the $car$ but only takes over a share of the prior probability of taking the bus. The ratio of probabilities of the pair \textit{(car, bus)} (\ref{eq: bus_car}) would not be IIA in this case and would instead be expected to change.
+% \\ \\
+% , such that the joint probability of choosing a \textit{public transport alternative} is kept constant at $\frac{1}{3}$ and likewise the probability for taking the $car$ at $\frac{2}{3}$.
+% In other words, the probability of taking the $car$ might be irrelevant of the addition of $train$ to the choice set, but the probability of taking the $bus$ is very unlikely to be irrelevant to adding a $train$-option. Thus, the ratio of probabilities of the pair \textit{(car, bus)} (\ref{eq: bus_car}) is not IIA in this case and would instead be expected to change.
+% \\ \\
+% While not very plausible, reality might show that by introducing a train line we would get a probability distribution not too far from (\ref{eq: bus_car_train}). Such a result could be explainable if $train$, while sharing some characteristics with the bus, also has some features different from the bus that makes it more attractive to the car-drivers (e.g. being able to work while commuting or both alternatives being more comfortable than the bus). Nonetheless, this would mean a double violation of the IIA-axiom that somehow about cancels each other out, as the individuals choosing train and car respectively would need to have some unobserved characteristics in common (e.g. having well-paid office-jobs or simply wanting to avoid less comfortable busses).
+%
+% Blue-bus/red-bus paradox
+% One of the most classic examples of violation of the IIA assumption is classic "red bus/blue bus paradox" \cite{koppelman_self_2006}.
+% The starting point is the commuters choice between car and a blue bus line as the means of transport for everyday commuting to work. Say that the commuter would take the car with probability $\frac{2}{3}$ and the blue bus with probability $\frac{1}{3}$, thus, the ratio of probabilities is
+%   \begin{equation} \label{eq: blue_car}
+%     \frac{\textrm{Pr}(\mathcal{J}=\textrm{car}|\mathcal{C})}
+%     {\textrm{Pr}(\mathcal{J}=\textrm{blue bus}|\mathcal{C})}=
+%     \frac{2/3}{1/3}=2
+%   \end{equation}
+% A competing bus company introduces a bus line on the same route with the only difference being that the bus is painted red instead of blue. Besides that the red bus line has the same characteristics as the blue bus line.
+%
+% Looking at this new choice set $\mathcal{C}'$ it is first of all clear that the utility optimizing commuter with a RUM-type utility function (\ref{eq: utility_general}) should choose blue bus and red bus with equal probability as they share the same characteristics
+%   \begin{equation} \label{eq: blue_red}
+%     \textrm{Pr}(\mathcal{J}=\textrm{blue bus}|\mathcal{C}')
+%     =\textrm{Pr}(\mathcal{J}=\textrm{red bus}|\mathcal{C}')
+%   \end{equation}
+% In line with the IIA assumption the ratio of probabilities (\ref{eq: blue_car}) is kept constant. Take also into account the condition (\ref{eq: blue_red}) and that the probabilities of the choices have to sum to one. The solution under these three conditions is that the the probabilities of the extended choice set $\textrm{C}$ should be
+%   \begin{equation} \label{eq: blue_red_car}
+%     \textrm{Pr}(\mathcal{J}=\textrm{car}|\mathcal{C}')=\frac{1}{2},\
+%     \textrm{Pr}(\mathcal{J}=\textrm{blue bus}|\mathcal{C}')=\frac{1}{4},\
+%     \textrm{Pr}(\mathcal{J}=\textrm{red bus}|\mathcal{C}')=\frac{1}{4}
+%   \end{equation}
+% Thus, the MNL model predicts that the effect of adding another bus on the same route is that the probability of taking the car drops from $\frac{2}{3}$ to $\frac{1}{2}$ while the joint probability of taking any bus goes up from $\frac{1}{3}$ to $\frac{1}{2}$.
+%
+% It is obvious that IIA is a wrong assumption in this case. The ratio of probabilities between the probability of taking the car and taking the blue bus should not be kept constant when adding an alternative such as a red bus that is likely to be irrelevant to the probability of taking the car but certainly not irrelevant to the probability of taking the blue bus, thus the ratio of probabilities (\ref{eq: blue_car}) should not be expected to be constant.
+
+
+
+% \subsection{Commuting-examples for the NL model}
+% \label{sec: NL_example}
+% Elaborating on the example for the MNL model in section (\ref{subsec: IIA}), still inspired by \citet{koppelman_self_2006}, we first consider the MNL-tree in figure \ref{fig: NL} where $c_1$ is taking the $bus$, $c_2$ is taking the $train$, and $c_3$ is to \textit{drive alone}. As pointed out in the MNL-example it is likely that $bus$ and $train$ have some attributes in common which could either be directly observed (by sharing an alternative-variant regressor like having the same cost in a joint ticket-system) or be unobserved while being represented in the error terms that would correlate (e.g. being more environmental friendly which could correlate with having a higher educational level, or not having a start-up cost as opposed to $car$ which could correlate with alternative-invariant regressors like having low income, being young, and/or female).
+%
+% To allow for correlation between $bus$ and $train$ we nest them together in a \textit{public transport} nest, $n_1$, as shown in the NL-tree in figure \ref{fig: NL}.
+% \\
+%   \begin{figure}[!h]
+%     \begin{center}
+%     \def\svgwidth{0.90\columnwidth}
+%     \import{03_figures/}{NL.pdf_tex}
+%     \end{center}
+%     \caption{Examples of Nested Logit models for different structures and choice sets. \\
+%     In our analogy $c_1$ is bus, $c_2$ is train, $c_3$ is drive alone (car), $c_4$ is shared-ride, $c_5$ is light-rail, and $n_1$ is a public transport nest.} \label{fig: NL}
+%   \end{figure} \\
+%   We analyze the choice set $\mathcal{C}$ and the addition of the option of choosing \textit{shared-ride}, $c_4$, giving us an extended choice set $\mathcal{C}'$. As a point of reference we make the strict assumption that \textit{shared-ride} is unnested and though does not have observed or unobserved attributes in common with any other alternative (as in the NL-tree for $\mathcal{C}'$ in figure \ref{fig: NL}). We will later loosen this restriction by introducing cross-nesting in section (\ref{sec: CNL_example}).
+%
+%   For now we consider the NL as a two-level process and take advantage of the fact that the \textit{bottom up method} gives consistent results \citep{train_discrete_2009}. Our lower model is the probability of choosing $bus$ or $train$ from the choice set $C_{n_1}$ given that we are in the \textit{public transport} nest $n_1$. Then for the upper model we do not observe $bus$ or $train$ directly but only observe \textit{public transport} as a possible choice, such that the choice set for the upper model (the root) $\mathcal{C}_R$ consists of \textit{public transport, drive alone}, thus $Pr(n_1|\mathcal{C}_R)=\sum\limits_{i\in\mathcal{C}_{n_1}}Pr(i|\mathcal{C})$.
+%
+%   Considering the two choice sets $\mathcal{C},\mathcal{C'}$ shown in figure \eqref{fig: NL} we can assume IIA for $(bus,train)$ as long as no sub-nest to $n_1$ exists. By the definition of $Pr(n_1|\mathcal{C}_R)$ we can assume IIA for \textit{(public transport, drive alone)} and \textit{(public transport, bus)} as the relative probability is unchanged for each of the pairs.
+%
+%   Now considering the upper model in $\mathcal{C},\mathcal{C'}$ we can assume IIA for \textit{(public transport, train)} as it is a simple MNL model. This would ensure that the relative probability would also be unchanged for \textit{(bus, drive alone)} and \textit{(bus, drive alone)} respectively which we prove as
+%   \begin{equation} \label{eq: NL_IIA_proof}
+%     \begin{split}
+%      \frac{\textrm{Pr}(c_3|\mathcal{C})} {\textrm{Pr}(n_1|\mathcal{C}_R)}
+%      =\frac{\textrm{Pr}(c_3|\mathcal{C'})} {\textrm{Pr}(n_1|\mathcal{C'}_R)}
+%      \ \wedge\ & %&&
+%      \frac{\textrm{Pr}(c_1|\mathcal{C})} {\textrm{Pr}(n_1|\mathcal{C}_R)}
+%      = \frac{\textrm{Pr}(c_1|\mathcal{C'})} {\textrm{Pr}(n_1|\mathcal{C'}_R)}
+%      \\ \Rightarrow
+%      \frac{\frac{\textrm{Pr}(c_3|\mathcal{C})} {\textrm{Pr}(n_1|\mathcal{C}_R)}}
+%      {\frac{\textrm{Pr}(c_1|\mathcal{C})} {\textrm{Pr}(n_1|\mathcal{C}_R)}}
+%      =\frac{\frac{\textrm{Pr}(c_3|\mathcal{C'})} {\textrm{Pr}(n_1|\mathcal{C'}_R)}}
+%      {\frac{\textrm{Pr}(c_1|\mathcal{C'})} {\textrm{Pr}(n_1|\mathcal{C'}_R)}}
+%      \Rightarrow &\ %&&
+%      \frac{\textrm{Pr}(c_3|\mathcal{C})} {\textrm{Pr}(c_1|\mathcal{C})}
+%      \ =\ \frac{\textrm{Pr}(c_3|\mathcal{C'})} {\textrm{Pr}(c_1|\mathcal{C'})},\  \ \ \ \ \textrm{Q.E.D.}
+%     \end{split}
+%   \end{equation}
+%   As long as the difference between $\mathcal{C},\mathcal{C'}$ is only in the root-nest, this proof can be extended for more complicated NL structures using iteration while sticking to the \textit{bottom up method}.
+%
+% \textbf{\textit{As a first example}} for a given commuter that with the addition of \textit{shared-ride} would choose this new option of \textit{shared-ride} with probability $\textrm{Pr}(c_4|\mathcal{C}')=\frac{1}{3}$ (a fixed number grabbed out of the air) then the other probabilities would change such that the relative probabilities pairwise were unchanged, e.g. if the commuter were twice as likely to choose \textit{drive alone} as opposed to \textit{public transport} in the prior choice set $\mathcal{C}$ he would also be it for the new choice set $\mathcal{C}'$ and likewise if choosing $bus$ and $train$ with equal probability. If the prior distributions were as in the first line below then they would change according to the IIA-assumptions in \eqref{eq: NL_IIA_proof} such that
+% \begin{equation*}
+% \begin{split}
+%   & \textrm{Pr}(c_3|\mathcal{C})\ =\frac{2}{3}
+%   \wedge \textrm{Pr}(n_1|\mathcal{C}_R)\ =\frac{1}{3}
+%   \wedge \textrm{Pr}(c_1|\mathcal{C})
+%   \ = \textrm{Pr}(c_2|\mathcal{C})=\ \frac{1}{6}
+%   \\ \Rightarrow \textrm{Pr}(c_4|\mathcal{C}')=\frac{1}{3}\
+%   \wedge\ &\textrm{Pr}(c_3|\mathcal{C'})=\frac{4}{9}
+%   \wedge \textrm{Pr}(n_1|\mathcal{C'}_R)=\frac{2}{9}
+%   \wedge\textrm{Pr}(c_1|\mathcal{C'})=\textrm{Pr}(c_2|\mathcal{C'})=\frac{1}{9}
+% \end{split}
+% \end{equation*}
+% Were the restriction is that $\sum\limits_{i\in\mathcal{C}_R}Pr(i|\mathcal{C}_R)=\sum\limits_{i\in\mathcal{C}}Pr(i|\mathcal{C})=1$ for $\mathcal{C}_R=(n_1,c_3)$ and $\mathcal{C}=(c_1,c_2,c_3)$.
+% \\ \\
+% \textbf{\textit{As a second example}} with a different result we again let the original choice set be $\mathcal{C}=c_1,c_2,c_3$ where $c_1,c_2\in n_1$. Now instead a \textit{light-rail}, $c_5$, enters with positive probability of being chosen. We assume equal competition between \textit{light rail}, $bus$, and $train$, thus, allocates \textit{light rail} into the \textit{public transport nest}, $n_1$, where the ratio of probabilities between $c_1,c_2$ is unchanged (IIA holds for the pair) as allocating alternatives into a nest at the same levels implies that we assume equal competition among all alternatives, thus the only significant correlation of the error terms is taken care of by the \textit{public transport} nest. This gives us the new choice set $\mathcal{C''}$ in figure \ref{fig: NL}.
+%
+% As seen in equation (\ref{eq: NL_deterministic_nest}) below the deterministic utility of choosing the \textit{public transport} nest $n_1$ contains the expected utility of the subsequent choices within the nest which is affected by the inclusion of \textit{light-rail}. As long as there exists some correlation between each of the pairs for \textit{(bus, train, light-rail)} (i.e. $0<\mu_{n_1}<1$) the joint utility of choosing the \textit{public transport} nest will be positively affected by the addition of \textit{light-rail} and thus the probability of choosing the \textit{public transport} nest will increase relative to the probability of choosing each of the alternatives \textit{drive alone, bus,} and $train$ which rules out that IIA could exist between \textit{public transport} and either of these. This prevents the same deduction through pairwise IIA with \textit{public transport} as in (\ref{eq: NL_IIA_proof}), thus, we see that IIA for the general case will not hold for either of the pairs \textit{(drive alone, bus)}, \textit{(drive alone, train)}, though the probability of each alternatives could randomly decrease such that the ratio of probabilities is kept constant by chance.
+%
+% \subsection{Commuting-example for the CNL model}
+% \label{sec: CNL_example}
+% Returning to the analogy of commuter's choice between \textit{bus, train, shared-ride,} and \textit{drive alone} $(c_1,c_2,c_3,c_4)$ we go from the $NL$ tree for choice set $\mathcal{C'}$ in figure \ref{fig: NL} to the $CNL_1$ tree in figure \ref{fig: CNL} by allowing \textit{shared ride}, $c_4$, to be cross-nested.
+%
+% The nest $n_1$ is the \textit{public transport} nest or more generally a \textit{group travel} nest as we imagine \textit{shared-ride} to have some similarities with $bus$ and $train$ by also being some kind of group travel. On the other hand it also differs by the fact that the means of transport is a private auto wherefore we also assumes that \textit{shared-ride} correlates with \textit{drive alone} and we nest them together in a \textit{private auto} nest, $n_2$. As $c_4$ is available across both nests we cannot assume IIA between any pair of alternatives in the tree as a change in any nest would affect this.
+% \\
+%   \begin{figure}[!h]
+%     \begin{center}
+%     \def\svgwidth{0.90\columnwidth}
+%     \import{03_figures/}{CNL.pdf_tex}
+%     \end{center}
+%     \caption{Examples Nested- and Cross-nested Logit models showing three different choice structures for the same choice set. \\
+%     Through our analogy $c_1$ is bus, $c_2$ is train, $c_3$ is drive alone (car), $c_4$ is shared-ride, $n_1$ is a public transport or \textit{group travel} nest, and $n_2$ is a \textit{private auto} nest.} \label{fig: CNL}
+%   \end{figure} \\
+% A common starting point for estimation is to define the tree structure by letting $c_4$ take equal part in both nests $\alpha_{c_4n_1}=\alpha_{c_4n_2}=\frac{1}{2}$ and also for the $CNL_1$ case restrict the other alternatives to not be cross-nested $\alpha_{c_1n_1}=\alpha_{c_2n_1}=\alpha_{c_3n_2}=1$. By identifying the system and applying appropriate estimation methods (see section \ref{sec: Estimation} and \ref{sec: Code}) the idea is to actually estimate the degree to which \textit{shared-ride} belongs to each nest. If $\alpha_{c_4n_1}=1-\alpha_{c_4n_2}$ is found to be sufficiently close to $0$ or 1 we have shown \textit{shared-ride} is indeed not cross-nested and our model collapses to a NL-structure where $c_4$ only belongs to the nest $m$ for which we estimate $\alpha_{c_4m}\rightarrow1$.
+% \\ \\
+% Other 2-level nesting structures could be assumed such as a \textit{road} nest for \textit{(bus, shared-ride, drive alone)} or a \textit{long-distance} nest for \textit{(train, shared-ride, drive alone)}. The $CNL_2$ tree in figure \ref{fig: NL} allows each possible pair of the choices $c_1,c_2,c_3,c_4$ to be correlated as a starting point, thus, in theory lets us estimate the any 2-level nesting structure with two nests. Unfortunately, as one could imagine, the objective function that we would then seek to minimize is high-dimensional as there is an $\alpha$-parameter for each cross-nest and far from convex, so that we are not guaranteed to have convergence nor be sure that our result is the global maximum.
+%
+% For model comparison one could also estimate 2-level nesting structures with one or three nests as well as 3-level nesting structures. E.g. instead of renaming the \textit{public transport} nest keeping it with \textit{(bus, train)} but creating a \textit{group transport} nest with \textit{(public transport, shared-ride)} such that the alternatives \textit{bus} and \textit{train} are not available until the \nth{3} level of the nesting structure.

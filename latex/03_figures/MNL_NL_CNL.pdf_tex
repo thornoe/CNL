@@ -1,0 +1,99 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'MNL_NL_CNL.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{597.08817226bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.29481219)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{MNL_NL_CNL.pdf}}%
+    \put(0.09330344,0.24148151){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$R$\end{tabular}}}}%
+    \put(0.06769722,0.28321278){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\large\textrm{MNL}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{MNL_NL_CNL.pdf}}%
+    \put(-0.00101404,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{MNL_NL_CNL.pdf}}%
+    \put(0.06212704,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_2$\end{tabular}}}}%
+    \put(0.12560044,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_3$\end{tabular}}}}%
+    \put(0.18888392,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_4$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{MNL_NL_CNL.pdf}}%
+    \put(0.25772193,0.14478527){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_1$\end{tabular}}}}%
+    \put(0.34017081,0.24148158){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$R$\end{tabular}}}}%
+    \put(0.32500894,0.28321286){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\large\textrm{NL}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{MNL_NL_CNL.pdf}}%
+    \put(0.24585331,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{MNL_NL_CNL.pdf}}%
+    \put(0.30899442,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_2$\end{tabular}}}}%
+    \put(0.37246779,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_3$\end{tabular}}}}%
+    \put(0.43575129,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_4$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{MNL_NL_CNL.pdf}}%
+    \put(0.5045893,0.14478527){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_1$\end{tabular}}}}%
+    \put(0.5870382,0.24148158){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$R$\end{tabular}}}}%
+    \put(0.56380561,0.28321293){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\large\textrm{CNL}_1$\end{tabular}}}}%
+    \put(0.65570061,0.14478527){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{MNL_NL_CNL.pdf}}%
+    \put(0.49272068,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{MNL_NL_CNL.pdf}}%
+    \put(0.55586177,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_2$\end{tabular}}}}%
+    \put(0.61933514,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_3$\end{tabular}}}}%
+    \put(0.68261864,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_4$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{MNL_NL_CNL.pdf}}%
+    \put(0.75145665,0.14478527){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_1$\end{tabular}}}}%
+    \put(0.83390555,0.24148158){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$R$\end{tabular}}}}%
+    \put(0.810673,0.28321293){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\large\textrm{CNL}_2$\end{tabular}}}}%
+    \put(0.90256796,0.14478527){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$n_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{MNL_NL_CNL.pdf}}%
+    \put(0.73958803,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{MNL_NL_CNL.pdf}}%
+    \put(0.80272912,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_2$\end{tabular}}}}%
+    \put(0.86620249,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_3$\end{tabular}}}}%
+    \put(0.92948599,0.00236172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$c_4$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{MNL_NL_CNL.pdf}}%
+  \end{picture}%
+\endgroup%
