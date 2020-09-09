@@ -1,1 +1,1 @@
-This paper was written for the seminar course in Advanced Microeconometrics at the Department of Economics at UCPH. The paper is authored by [Thor Noe](https://github.com/thornoe) and myself. 
+This [paper](https://github.com/thornoe/Cross-Nested_Logit_Model/raw/master/latex/main.pdf) was written for the seminar course in Advanced Microeconometrics at the Department of Economics at UCPH. The paper is authored by [Kristian Urup Olesen Larsen](https://github.com/Kristianuruplarsen) and myself. 
